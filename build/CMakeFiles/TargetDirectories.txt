@@ -1,3 +1,0 @@
-/home/neilc/SocialLens/build/CMakeFiles/create_demo_video.dir
-/home/neilc/SocialLens/build/CMakeFiles/edit_cache.dir
-/home/neilc/SocialLens/build/CMakeFiles/rebuild_cache.dir
