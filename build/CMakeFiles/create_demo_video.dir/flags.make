@@ -4,7 +4,7 @@
 # compile CXX with /usr/bin/c++
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I/home/neilc/SocialLens/include -I/home/neilc/SocialLens/emotion_detector -I/usr/local/onnxruntime/include -isystem /usr/local/include/physiology -isystem /usr/local/include/physiology/interface -isystem /usr/local/include/opencv4
+CXX_INCLUDES = -I/home/neilc/SocialLens/include -I/home/neilc/SocialLens/emotion_detector -isystem /usr/local/include/physiology -isystem /usr/local/include/physiology/interface -isystem /usr/local/include/opencv4 -isystem /usr/local/onnxruntime/include
 
 CXX_FLAGS = -std=gnu++17
 

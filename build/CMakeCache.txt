@@ -283,6 +283,9 @@ PKG_CONFIG_EXECUTABLE:FILEPATH=/usr/bin/pkg-config
 //The directory containing a CMake configuration file for PhysiologyEdge.
 PhysiologyEdge_DIR:PATH=/usr/local/lib/cmake/PhysiologyEdge
 
+//Embed runtime library search paths into binaries
+SOCIALLENS_ENABLE_RPATH:BOOL=ON
+
 //Value Computed by CMake
 SmartSpectraAttentionDemo_BINARY_DIR:STATIC=/home/neilc/SocialLens/build
 

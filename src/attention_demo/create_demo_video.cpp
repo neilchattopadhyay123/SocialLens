@@ -1,5 +1,6 @@
 #include "attention_demo/demo_video_app.hpp"
 
+#include <cstdlib>
 #include <glog/logging.h>
 #include <iostream>
 #include <string>

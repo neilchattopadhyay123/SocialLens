@@ -7,10 +7,12 @@ set(CMAKE_USE_RELATIVE_PATHS ON)
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
+option(SOCIALLENS_ENABLE_RPATH "Embed runtime library search paths into binaries" ON)
+
 find_package(SmartSpectra REQUIRED)
 find_package(OpenCV REQUIRED)
 
-set(ONNXRUNTIME_ROOT "/usr/local/onnxruntime" CACHE PATH "Path to ONNX Runtime installation root")
+set(ONNXRUNTIME_ROOT "${CMAKE_SOURCE_DIR}/third_party/onnxruntime" CACHE PATH "Path to ONNX Runtime installation root")
 
 find_path(ONNXRUNTIME_INCLUDE_DIR
     NAMES
@@ -49,6 +51,12 @@ if(NOT ONNXRUNTIME_INCLUDE_DIR OR NOT ONNXRUNTIME_LIBRARY)
     message(FATAL_ERROR "ONNX Runtime not found. Set ONNXRUNTIME_ROOT or install ONNX Runtime headers/libs.")
 endif()
 
+add_library(ONNXRuntime::onnxruntime SHARED IMPORTED GLOBAL)
+set_target_properties(ONNXRuntime::onnxruntime PROPERTIES
+    IMPORTED_LOCATION "${ONNXRUNTIME_LIBRARY}"
+    INTERFACE_INCLUDE_DIRECTORIES "${ONNXRUNTIME_INCLUDE_DIR}"
+)
+
 add_executable(create_demo_video
     src/attention_demo/create_demo_video.cpp
     src/attention_demo/demo_video_app.cpp
@@ -60,12 +68,19 @@ add_executable(create_demo_video
 target_include_directories(create_demo_video PRIVATE
     include
     emotion_detector
-    ${ONNXRUNTIME_INCLUDE_DIR}
 )
 
 target_link_libraries(create_demo_video
     SmartSpectra::Container
     SmartSpectra::Gui
     ${OpenCV_LIBS}
-    ${ONNXRUNTIME_LIBRARY}
+    ONNXRuntime::onnxruntime
 )
+
+if(SOCIALLENS_ENABLE_RPATH)
+    get_filename_component(ONNXRUNTIME_LIB_DIR "${ONNXRUNTIME_LIBRARY}" DIRECTORY)
+    set_target_properties(create_demo_video PROPERTIES
+        BUILD_RPATH "${ONNXRUNTIME_LIB_DIR}"
+        INSTALL_RPATH "${ONNXRUNTIME_LIB_DIR}"
+    )
+endif()
