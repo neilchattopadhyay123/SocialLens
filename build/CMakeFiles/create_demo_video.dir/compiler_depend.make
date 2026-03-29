@@ -726,6 +726,7 @@ CMakeFiles/create_demo_video.dir/src/attention_demo/create_demo_video.cpp.o: /ho
   /usr/local/include/physiology/interface/glog/vlog_is_on.h
 
 CMakeFiles/create_demo_video.dir/src/attention_demo/demo_video_app.cpp.o: /home/neilc/SocialLens/src/attention_demo/demo_video_app.cpp \
+  /home/neilc/SocialLens/emotion_detector/EmotionDetector.hpp \
   /home/neilc/SocialLens/include/attention_demo/attention_estimator.hpp \
   /home/neilc/SocialLens/include/attention_demo/demo_video_app.hpp \
   /home/neilc/SocialLens/include/attention_demo/overlay_renderer.hpp \
@@ -966,115 +967,6 @@ CMakeFiles/create_demo_video.dir/src/attention_demo/demo_video_app.cpp.o: /home/
   /usr/include/linux/limits.h \
   /usr/include/locale.h \
   /usr/include/math.h \
-  /usr/include/opencv4/opencv2/calib3d.hpp \
-  /usr/include/opencv4/opencv2/core.hpp \
-  /usr/include/opencv4/opencv2/core/affine.hpp \
-  /usr/include/opencv4/opencv2/core/async.hpp \
-  /usr/include/opencv4/opencv2/core/base.hpp \
-  /usr/include/opencv4/opencv2/core/bufferpool.hpp \
-  /usr/include/opencv4/opencv2/core/check.hpp \
-  /usr/include/opencv4/opencv2/core/cuda.hpp \
-  /usr/include/opencv4/opencv2/core/cuda.inl.hpp \
-  /usr/include/opencv4/opencv2/core/cuda_types.hpp \
-  /usr/include/opencv4/opencv2/core/cv_cpu_dispatch.h \
-  /usr/include/opencv4/opencv2/core/cvdef.h \
-  /usr/include/opencv4/opencv2/core/cvstd.hpp \
-  /usr/include/opencv4/opencv2/core/cvstd.inl.hpp \
-  /usr/include/opencv4/opencv2/core/cvstd_wrapper.hpp \
-  /usr/include/opencv4/opencv2/core/fast_math.hpp \
-  /usr/include/opencv4/opencv2/core/hal/interface.h \
-  /usr/include/opencv4/opencv2/core/mat.hpp \
-  /usr/include/opencv4/opencv2/core/mat.inl.hpp \
-  /usr/include/opencv4/opencv2/core/matx.hpp \
-  /usr/include/opencv4/opencv2/core/matx.inl.hpp \
-  /usr/include/opencv4/opencv2/core/neon_utils.hpp \
-  /usr/include/opencv4/opencv2/core/operations.hpp \
-  /usr/include/opencv4/opencv2/core/optim.hpp \
-  /usr/include/opencv4/opencv2/core/ovx.hpp \
-  /usr/include/opencv4/opencv2/core/persistence.hpp \
-  /usr/include/opencv4/opencv2/core/saturate.hpp \
-  /usr/include/opencv4/opencv2/core/traits.hpp \
-  /usr/include/opencv4/opencv2/core/types.hpp \
-  /usr/include/opencv4/opencv2/core/utility.hpp \
-  /usr/include/opencv4/opencv2/core/utils/logger.defines.hpp \
-  /usr/include/opencv4/opencv2/core/utils/logger.hpp \
-  /usr/include/opencv4/opencv2/core/utils/logtag.hpp \
-  /usr/include/opencv4/opencv2/core/version.hpp \
-  /usr/include/opencv4/opencv2/core/vsx_utils.hpp \
-  /usr/include/opencv4/opencv2/dnn.hpp \
-  /usr/include/opencv4/opencv2/dnn/dict.hpp \
-  /usr/include/opencv4/opencv2/dnn/dnn.hpp \
-  /usr/include/opencv4/opencv2/dnn/dnn.inl.hpp \
-  /usr/include/opencv4/opencv2/dnn/layer.hpp \
-  /usr/include/opencv4/opencv2/dnn/utils/inference_engine.hpp \
-  /usr/include/opencv4/opencv2/dnn/version.hpp \
-  /usr/include/opencv4/opencv2/features2d.hpp \
-  /usr/include/opencv4/opencv2/flann.hpp \
-  /usr/include/opencv4/opencv2/flann/all_indices.h \
-  /usr/include/opencv4/opencv2/flann/allocator.h \
-  /usr/include/opencv4/opencv2/flann/any.h \
-  /usr/include/opencv4/opencv2/flann/autotuned_index.h \
-  /usr/include/opencv4/opencv2/flann/composite_index.h \
-  /usr/include/opencv4/opencv2/flann/config.h \
-  /usr/include/opencv4/opencv2/flann/defines.h \
-  /usr/include/opencv4/opencv2/flann/dist.h \
-  /usr/include/opencv4/opencv2/flann/dynamic_bitset.h \
-  /usr/include/opencv4/opencv2/flann/flann_base.hpp \
-  /usr/include/opencv4/opencv2/flann/general.h \
-  /usr/include/opencv4/opencv2/flann/ground_truth.h \
-  /usr/include/opencv4/opencv2/flann/heap.h \
-  /usr/include/opencv4/opencv2/flann/hierarchical_clustering_index.h \
-  /usr/include/opencv4/opencv2/flann/index_testing.h \
-  /usr/include/opencv4/opencv2/flann/kdtree_index.h \
-  /usr/include/opencv4/opencv2/flann/kdtree_single_index.h \
-  /usr/include/opencv4/opencv2/flann/kmeans_index.h \
-  /usr/include/opencv4/opencv2/flann/linear_index.h \
-  /usr/include/opencv4/opencv2/flann/logger.h \
-  /usr/include/opencv4/opencv2/flann/lsh_index.h \
-  /usr/include/opencv4/opencv2/flann/lsh_table.h \
-  /usr/include/opencv4/opencv2/flann/matrix.h \
-  /usr/include/opencv4/opencv2/flann/miniflann.hpp \
-  /usr/include/opencv4/opencv2/flann/nn_index.h \
-  /usr/include/opencv4/opencv2/flann/params.h \
-  /usr/include/opencv4/opencv2/flann/random.h \
-  /usr/include/opencv4/opencv2/flann/result_set.h \
-  /usr/include/opencv4/opencv2/flann/sampling.h \
-  /usr/include/opencv4/opencv2/flann/saving.h \
-  /usr/include/opencv4/opencv2/flann/timer.h \
-  /usr/include/opencv4/opencv2/highgui.hpp \
-  /usr/include/opencv4/opencv2/imgcodecs.hpp \
-  /usr/include/opencv4/opencv2/imgproc.hpp \
-  /usr/include/opencv4/opencv2/imgproc/segmentation.hpp \
-  /usr/include/opencv4/opencv2/ml.hpp \
-  /usr/include/opencv4/opencv2/ml/ml.inl.hpp \
-  /usr/include/opencv4/opencv2/objdetect.hpp \
-  /usr/include/opencv4/opencv2/objdetect/aruco_board.hpp \
-  /usr/include/opencv4/opencv2/objdetect/aruco_detector.hpp \
-  /usr/include/opencv4/opencv2/objdetect/aruco_dictionary.hpp \
-  /usr/include/opencv4/opencv2/objdetect/barcode.hpp \
-  /usr/include/opencv4/opencv2/objdetect/charuco_detector.hpp \
-  /usr/include/opencv4/opencv2/objdetect/detection_based_tracker.hpp \
-  /usr/include/opencv4/opencv2/objdetect/face.hpp \
-  /usr/include/opencv4/opencv2/objdetect/graphical_code_detector.hpp \
-  /usr/include/opencv4/opencv2/opencv.hpp \
-  /usr/include/opencv4/opencv2/opencv_modules.hpp \
-  /usr/include/opencv4/opencv2/photo.hpp \
-  /usr/include/opencv4/opencv2/stitching.hpp \
-  /usr/include/opencv4/opencv2/stitching/detail/blenders.hpp \
-  /usr/include/opencv4/opencv2/stitching/detail/camera.hpp \
-  /usr/include/opencv4/opencv2/stitching/detail/exposure_compensate.hpp \
-  /usr/include/opencv4/opencv2/stitching/detail/matchers.hpp \
-  /usr/include/opencv4/opencv2/stitching/detail/motion_estimators.hpp \
-  /usr/include/opencv4/opencv2/stitching/detail/seam_finders.hpp \
-  /usr/include/opencv4/opencv2/stitching/detail/util.hpp \
-  /usr/include/opencv4/opencv2/stitching/detail/util_inl.hpp \
-  /usr/include/opencv4/opencv2/stitching/detail/warpers.hpp \
-  /usr/include/opencv4/opencv2/stitching/detail/warpers_inl.hpp \
-  /usr/include/opencv4/opencv2/stitching/warpers.hpp \
-  /usr/include/opencv4/opencv2/video.hpp \
-  /usr/include/opencv4/opencv2/video/background_segm.hpp \
-  /usr/include/opencv4/opencv2/video/tracking.hpp \
-  /usr/include/opencv4/opencv2/videoio.hpp \
   /usr/include/pthread.h \
   /usr/include/sched.h \
   /usr/include/stdc-predef.h \
@@ -1195,6 +1087,7 @@ CMakeFiles/create_demo_video.dir/src/attention_demo/demo_video_app.cpp.o: /home/
   /usr/lib/gcc/x86_64-linux-gnu/11/include/mm_malloc.h \
   /usr/lib/gcc/x86_64-linux-gnu/11/include/mmintrin.h \
   /usr/lib/gcc/x86_64-linux-gnu/11/include/stdarg.h \
+  /usr/lib/gcc/x86_64-linux-gnu/11/include/stdbool.h \
   /usr/lib/gcc/x86_64-linux-gnu/11/include/stddef.h \
   /usr/lib/gcc/x86_64-linux-gnu/11/include/stdint.h \
   /usr/lib/gcc/x86_64-linux-gnu/11/include/syslimits.h \
@@ -1313,6 +1206,115 @@ CMakeFiles/create_demo_video.dir/src/attention_demo/demo_video_app.cpp.o: /home/
   /usr/local/include/mediapipe/gpu/multi_pool.h \
   /usr/local/include/mediapipe/gpu/reusable_pool.h \
   /usr/local/include/mediapipe/util/resource_cache.h \
+  /usr/local/include/opencv4/opencv2/calib3d.hpp \
+  /usr/local/include/opencv4/opencv2/core.hpp \
+  /usr/local/include/opencv4/opencv2/core/affine.hpp \
+  /usr/local/include/opencv4/opencv2/core/async.hpp \
+  /usr/local/include/opencv4/opencv2/core/base.hpp \
+  /usr/local/include/opencv4/opencv2/core/bufferpool.hpp \
+  /usr/local/include/opencv4/opencv2/core/check.hpp \
+  /usr/local/include/opencv4/opencv2/core/cuda.hpp \
+  /usr/local/include/opencv4/opencv2/core/cuda.inl.hpp \
+  /usr/local/include/opencv4/opencv2/core/cuda_types.hpp \
+  /usr/local/include/opencv4/opencv2/core/cv_cpu_dispatch.h \
+  /usr/local/include/opencv4/opencv2/core/cvdef.h \
+  /usr/local/include/opencv4/opencv2/core/cvstd.hpp \
+  /usr/local/include/opencv4/opencv2/core/cvstd.inl.hpp \
+  /usr/local/include/opencv4/opencv2/core/cvstd_wrapper.hpp \
+  /usr/local/include/opencv4/opencv2/core/fast_math.hpp \
+  /usr/local/include/opencv4/opencv2/core/hal/interface.h \
+  /usr/local/include/opencv4/opencv2/core/mat.hpp \
+  /usr/local/include/opencv4/opencv2/core/mat.inl.hpp \
+  /usr/local/include/opencv4/opencv2/core/matx.hpp \
+  /usr/local/include/opencv4/opencv2/core/matx.inl.hpp \
+  /usr/local/include/opencv4/opencv2/core/neon_utils.hpp \
+  /usr/local/include/opencv4/opencv2/core/operations.hpp \
+  /usr/local/include/opencv4/opencv2/core/optim.hpp \
+  /usr/local/include/opencv4/opencv2/core/ovx.hpp \
+  /usr/local/include/opencv4/opencv2/core/persistence.hpp \
+  /usr/local/include/opencv4/opencv2/core/saturate.hpp \
+  /usr/local/include/opencv4/opencv2/core/traits.hpp \
+  /usr/local/include/opencv4/opencv2/core/types.hpp \
+  /usr/local/include/opencv4/opencv2/core/utility.hpp \
+  /usr/local/include/opencv4/opencv2/core/utils/logger.defines.hpp \
+  /usr/local/include/opencv4/opencv2/core/utils/logger.hpp \
+  /usr/local/include/opencv4/opencv2/core/utils/logtag.hpp \
+  /usr/local/include/opencv4/opencv2/core/version.hpp \
+  /usr/local/include/opencv4/opencv2/core/vsx_utils.hpp \
+  /usr/local/include/opencv4/opencv2/dnn.hpp \
+  /usr/local/include/opencv4/opencv2/dnn/dict.hpp \
+  /usr/local/include/opencv4/opencv2/dnn/dnn.hpp \
+  /usr/local/include/opencv4/opencv2/dnn/dnn.inl.hpp \
+  /usr/local/include/opencv4/opencv2/dnn/layer.hpp \
+  /usr/local/include/opencv4/opencv2/dnn/utils/inference_engine.hpp \
+  /usr/local/include/opencv4/opencv2/dnn/version.hpp \
+  /usr/local/include/opencv4/opencv2/features2d.hpp \
+  /usr/local/include/opencv4/opencv2/flann.hpp \
+  /usr/local/include/opencv4/opencv2/flann/all_indices.h \
+  /usr/local/include/opencv4/opencv2/flann/allocator.h \
+  /usr/local/include/opencv4/opencv2/flann/any.h \
+  /usr/local/include/opencv4/opencv2/flann/autotuned_index.h \
+  /usr/local/include/opencv4/opencv2/flann/composite_index.h \
+  /usr/local/include/opencv4/opencv2/flann/config.h \
+  /usr/local/include/opencv4/opencv2/flann/defines.h \
+  /usr/local/include/opencv4/opencv2/flann/dist.h \
+  /usr/local/include/opencv4/opencv2/flann/dynamic_bitset.h \
+  /usr/local/include/opencv4/opencv2/flann/flann_base.hpp \
+  /usr/local/include/opencv4/opencv2/flann/general.h \
+  /usr/local/include/opencv4/opencv2/flann/ground_truth.h \
+  /usr/local/include/opencv4/opencv2/flann/heap.h \
+  /usr/local/include/opencv4/opencv2/flann/hierarchical_clustering_index.h \
+  /usr/local/include/opencv4/opencv2/flann/index_testing.h \
+  /usr/local/include/opencv4/opencv2/flann/kdtree_index.h \
+  /usr/local/include/opencv4/opencv2/flann/kdtree_single_index.h \
+  /usr/local/include/opencv4/opencv2/flann/kmeans_index.h \
+  /usr/local/include/opencv4/opencv2/flann/linear_index.h \
+  /usr/local/include/opencv4/opencv2/flann/logger.h \
+  /usr/local/include/opencv4/opencv2/flann/lsh_index.h \
+  /usr/local/include/opencv4/opencv2/flann/lsh_table.h \
+  /usr/local/include/opencv4/opencv2/flann/matrix.h \
+  /usr/local/include/opencv4/opencv2/flann/miniflann.hpp \
+  /usr/local/include/opencv4/opencv2/flann/nn_index.h \
+  /usr/local/include/opencv4/opencv2/flann/params.h \
+  /usr/local/include/opencv4/opencv2/flann/random.h \
+  /usr/local/include/opencv4/opencv2/flann/result_set.h \
+  /usr/local/include/opencv4/opencv2/flann/sampling.h \
+  /usr/local/include/opencv4/opencv2/flann/saving.h \
+  /usr/local/include/opencv4/opencv2/flann/timer.h \
+  /usr/local/include/opencv4/opencv2/highgui.hpp \
+  /usr/local/include/opencv4/opencv2/imgcodecs.hpp \
+  /usr/local/include/opencv4/opencv2/imgproc.hpp \
+  /usr/local/include/opencv4/opencv2/imgproc/segmentation.hpp \
+  /usr/local/include/opencv4/opencv2/ml.hpp \
+  /usr/local/include/opencv4/opencv2/ml/ml.inl.hpp \
+  /usr/local/include/opencv4/opencv2/objdetect.hpp \
+  /usr/local/include/opencv4/opencv2/objdetect/aruco_board.hpp \
+  /usr/local/include/opencv4/opencv2/objdetect/aruco_detector.hpp \
+  /usr/local/include/opencv4/opencv2/objdetect/aruco_dictionary.hpp \
+  /usr/local/include/opencv4/opencv2/objdetect/barcode.hpp \
+  /usr/local/include/opencv4/opencv2/objdetect/charuco_detector.hpp \
+  /usr/local/include/opencv4/opencv2/objdetect/detection_based_tracker.hpp \
+  /usr/local/include/opencv4/opencv2/objdetect/face.hpp \
+  /usr/local/include/opencv4/opencv2/objdetect/graphical_code_detector.hpp \
+  /usr/local/include/opencv4/opencv2/opencv.hpp \
+  /usr/local/include/opencv4/opencv2/opencv_modules.hpp \
+  /usr/local/include/opencv4/opencv2/photo.hpp \
+  /usr/local/include/opencv4/opencv2/stitching.hpp \
+  /usr/local/include/opencv4/opencv2/stitching/detail/blenders.hpp \
+  /usr/local/include/opencv4/opencv2/stitching/detail/camera.hpp \
+  /usr/local/include/opencv4/opencv2/stitching/detail/exposure_compensate.hpp \
+  /usr/local/include/opencv4/opencv2/stitching/detail/matchers.hpp \
+  /usr/local/include/opencv4/opencv2/stitching/detail/motion_estimators.hpp \
+  /usr/local/include/opencv4/opencv2/stitching/detail/seam_finders.hpp \
+  /usr/local/include/opencv4/opencv2/stitching/detail/util.hpp \
+  /usr/local/include/opencv4/opencv2/stitching/detail/util_inl.hpp \
+  /usr/local/include/opencv4/opencv2/stitching/detail/warpers.hpp \
+  /usr/local/include/opencv4/opencv2/stitching/detail/warpers_inl.hpp \
+  /usr/local/include/opencv4/opencv2/stitching/warpers.hpp \
+  /usr/local/include/opencv4/opencv2/video.hpp \
+  /usr/local/include/opencv4/opencv2/video/background_segm.hpp \
+  /usr/local/include/opencv4/opencv2/video/tracking.hpp \
+  /usr/local/include/opencv4/opencv2/videoio.hpp \
   /usr/local/include/physiology/google/protobuf/any.h \
   /usr/local/include/physiology/google/protobuf/any.pb.h \
   /usr/local/include/physiology/google/protobuf/arena.h \
@@ -1580,7 +1582,11 @@ CMakeFiles/create_demo_video.dir/src/attention_demo/demo_video_app.cpp.o: /home/
   /usr/local/include/smartspectra/video_source/input_transformer.hpp \
   /usr/local/include/smartspectra/video_source/resolution_selection_mode.hpp \
   /usr/local/include/smartspectra/video_source/settings.hpp \
-  /usr/local/include/smartspectra/video_source/video_source.hpp
+  /usr/local/include/smartspectra/video_source/video_source.hpp \
+  /usr/local/onnxruntime/include/onnxruntime_c_api.h \
+  /usr/local/onnxruntime/include/onnxruntime_cxx_api.h \
+  /usr/local/onnxruntime/include/onnxruntime_cxx_inline.h \
+  /usr/local/onnxruntime/include/onnxruntime_float16.h
 
 CMakeFiles/create_demo_video.dir/src/attention_demo/overlay_renderer.cpp.o: /home/neilc/SocialLens/src/attention_demo/overlay_renderer.cpp \
   /home/neilc/SocialLens/include/attention_demo/overlay_renderer.hpp \
@@ -1775,115 +1781,6 @@ CMakeFiles/create_demo_video.dir/src/attention_demo/overlay_renderer.cpp.o: /hom
   /usr/include/linux/limits.h \
   /usr/include/locale.h \
   /usr/include/math.h \
-  /usr/include/opencv4/opencv2/calib3d.hpp \
-  /usr/include/opencv4/opencv2/core.hpp \
-  /usr/include/opencv4/opencv2/core/affine.hpp \
-  /usr/include/opencv4/opencv2/core/async.hpp \
-  /usr/include/opencv4/opencv2/core/base.hpp \
-  /usr/include/opencv4/opencv2/core/bufferpool.hpp \
-  /usr/include/opencv4/opencv2/core/check.hpp \
-  /usr/include/opencv4/opencv2/core/cuda.hpp \
-  /usr/include/opencv4/opencv2/core/cuda.inl.hpp \
-  /usr/include/opencv4/opencv2/core/cuda_types.hpp \
-  /usr/include/opencv4/opencv2/core/cv_cpu_dispatch.h \
-  /usr/include/opencv4/opencv2/core/cvdef.h \
-  /usr/include/opencv4/opencv2/core/cvstd.hpp \
-  /usr/include/opencv4/opencv2/core/cvstd.inl.hpp \
-  /usr/include/opencv4/opencv2/core/cvstd_wrapper.hpp \
-  /usr/include/opencv4/opencv2/core/fast_math.hpp \
-  /usr/include/opencv4/opencv2/core/hal/interface.h \
-  /usr/include/opencv4/opencv2/core/mat.hpp \
-  /usr/include/opencv4/opencv2/core/mat.inl.hpp \
-  /usr/include/opencv4/opencv2/core/matx.hpp \
-  /usr/include/opencv4/opencv2/core/matx.inl.hpp \
-  /usr/include/opencv4/opencv2/core/neon_utils.hpp \
-  /usr/include/opencv4/opencv2/core/operations.hpp \
-  /usr/include/opencv4/opencv2/core/optim.hpp \
-  /usr/include/opencv4/opencv2/core/ovx.hpp \
-  /usr/include/opencv4/opencv2/core/persistence.hpp \
-  /usr/include/opencv4/opencv2/core/saturate.hpp \
-  /usr/include/opencv4/opencv2/core/traits.hpp \
-  /usr/include/opencv4/opencv2/core/types.hpp \
-  /usr/include/opencv4/opencv2/core/utility.hpp \
-  /usr/include/opencv4/opencv2/core/utils/logger.defines.hpp \
-  /usr/include/opencv4/opencv2/core/utils/logger.hpp \
-  /usr/include/opencv4/opencv2/core/utils/logtag.hpp \
-  /usr/include/opencv4/opencv2/core/version.hpp \
-  /usr/include/opencv4/opencv2/core/vsx_utils.hpp \
-  /usr/include/opencv4/opencv2/dnn.hpp \
-  /usr/include/opencv4/opencv2/dnn/dict.hpp \
-  /usr/include/opencv4/opencv2/dnn/dnn.hpp \
-  /usr/include/opencv4/opencv2/dnn/dnn.inl.hpp \
-  /usr/include/opencv4/opencv2/dnn/layer.hpp \
-  /usr/include/opencv4/opencv2/dnn/utils/inference_engine.hpp \
-  /usr/include/opencv4/opencv2/dnn/version.hpp \
-  /usr/include/opencv4/opencv2/features2d.hpp \
-  /usr/include/opencv4/opencv2/flann.hpp \
-  /usr/include/opencv4/opencv2/flann/all_indices.h \
-  /usr/include/opencv4/opencv2/flann/allocator.h \
-  /usr/include/opencv4/opencv2/flann/any.h \
-  /usr/include/opencv4/opencv2/flann/autotuned_index.h \
-  /usr/include/opencv4/opencv2/flann/composite_index.h \
-  /usr/include/opencv4/opencv2/flann/config.h \
-  /usr/include/opencv4/opencv2/flann/defines.h \
-  /usr/include/opencv4/opencv2/flann/dist.h \
-  /usr/include/opencv4/opencv2/flann/dynamic_bitset.h \
-  /usr/include/opencv4/opencv2/flann/flann_base.hpp \
-  /usr/include/opencv4/opencv2/flann/general.h \
-  /usr/include/opencv4/opencv2/flann/ground_truth.h \
-  /usr/include/opencv4/opencv2/flann/heap.h \
-  /usr/include/opencv4/opencv2/flann/hierarchical_clustering_index.h \
-  /usr/include/opencv4/opencv2/flann/index_testing.h \
-  /usr/include/opencv4/opencv2/flann/kdtree_index.h \
-  /usr/include/opencv4/opencv2/flann/kdtree_single_index.h \
-  /usr/include/opencv4/opencv2/flann/kmeans_index.h \
-  /usr/include/opencv4/opencv2/flann/linear_index.h \
-  /usr/include/opencv4/opencv2/flann/logger.h \
-  /usr/include/opencv4/opencv2/flann/lsh_index.h \
-  /usr/include/opencv4/opencv2/flann/lsh_table.h \
-  /usr/include/opencv4/opencv2/flann/matrix.h \
-  /usr/include/opencv4/opencv2/flann/miniflann.hpp \
-  /usr/include/opencv4/opencv2/flann/nn_index.h \
-  /usr/include/opencv4/opencv2/flann/params.h \
-  /usr/include/opencv4/opencv2/flann/random.h \
-  /usr/include/opencv4/opencv2/flann/result_set.h \
-  /usr/include/opencv4/opencv2/flann/sampling.h \
-  /usr/include/opencv4/opencv2/flann/saving.h \
-  /usr/include/opencv4/opencv2/flann/timer.h \
-  /usr/include/opencv4/opencv2/highgui.hpp \
-  /usr/include/opencv4/opencv2/imgcodecs.hpp \
-  /usr/include/opencv4/opencv2/imgproc.hpp \
-  /usr/include/opencv4/opencv2/imgproc/segmentation.hpp \
-  /usr/include/opencv4/opencv2/ml.hpp \
-  /usr/include/opencv4/opencv2/ml/ml.inl.hpp \
-  /usr/include/opencv4/opencv2/objdetect.hpp \
-  /usr/include/opencv4/opencv2/objdetect/aruco_board.hpp \
-  /usr/include/opencv4/opencv2/objdetect/aruco_detector.hpp \
-  /usr/include/opencv4/opencv2/objdetect/aruco_dictionary.hpp \
-  /usr/include/opencv4/opencv2/objdetect/barcode.hpp \
-  /usr/include/opencv4/opencv2/objdetect/charuco_detector.hpp \
-  /usr/include/opencv4/opencv2/objdetect/detection_based_tracker.hpp \
-  /usr/include/opencv4/opencv2/objdetect/face.hpp \
-  /usr/include/opencv4/opencv2/objdetect/graphical_code_detector.hpp \
-  /usr/include/opencv4/opencv2/opencv.hpp \
-  /usr/include/opencv4/opencv2/opencv_modules.hpp \
-  /usr/include/opencv4/opencv2/photo.hpp \
-  /usr/include/opencv4/opencv2/stitching.hpp \
-  /usr/include/opencv4/opencv2/stitching/detail/blenders.hpp \
-  /usr/include/opencv4/opencv2/stitching/detail/camera.hpp \
-  /usr/include/opencv4/opencv2/stitching/detail/exposure_compensate.hpp \
-  /usr/include/opencv4/opencv2/stitching/detail/matchers.hpp \
-  /usr/include/opencv4/opencv2/stitching/detail/motion_estimators.hpp \
-  /usr/include/opencv4/opencv2/stitching/detail/seam_finders.hpp \
-  /usr/include/opencv4/opencv2/stitching/detail/util.hpp \
-  /usr/include/opencv4/opencv2/stitching/detail/util_inl.hpp \
-  /usr/include/opencv4/opencv2/stitching/detail/warpers.hpp \
-  /usr/include/opencv4/opencv2/stitching/detail/warpers_inl.hpp \
-  /usr/include/opencv4/opencv2/stitching/warpers.hpp \
-  /usr/include/opencv4/opencv2/video.hpp \
-  /usr/include/opencv4/opencv2/video/background_segm.hpp \
-  /usr/include/opencv4/opencv2/video/tracking.hpp \
-  /usr/include/opencv4/opencv2/videoio.hpp \
   /usr/include/pthread.h \
   /usr/include/sched.h \
   /usr/include/stdc-predef.h \
@@ -1998,7 +1895,116 @@ CMakeFiles/create_demo_video.dir/src/attention_demo/overlay_renderer.cpp.o: /hom
   /usr/lib/gcc/x86_64-linux-gnu/11/include/stddef.h \
   /usr/lib/gcc/x86_64-linux-gnu/11/include/stdint.h \
   /usr/lib/gcc/x86_64-linux-gnu/11/include/syslimits.h \
-  /usr/lib/gcc/x86_64-linux-gnu/11/include/xmmintrin.h
+  /usr/lib/gcc/x86_64-linux-gnu/11/include/xmmintrin.h \
+  /usr/local/include/opencv4/opencv2/calib3d.hpp \
+  /usr/local/include/opencv4/opencv2/core.hpp \
+  /usr/local/include/opencv4/opencv2/core/affine.hpp \
+  /usr/local/include/opencv4/opencv2/core/async.hpp \
+  /usr/local/include/opencv4/opencv2/core/base.hpp \
+  /usr/local/include/opencv4/opencv2/core/bufferpool.hpp \
+  /usr/local/include/opencv4/opencv2/core/check.hpp \
+  /usr/local/include/opencv4/opencv2/core/cuda.hpp \
+  /usr/local/include/opencv4/opencv2/core/cuda.inl.hpp \
+  /usr/local/include/opencv4/opencv2/core/cuda_types.hpp \
+  /usr/local/include/opencv4/opencv2/core/cv_cpu_dispatch.h \
+  /usr/local/include/opencv4/opencv2/core/cvdef.h \
+  /usr/local/include/opencv4/opencv2/core/cvstd.hpp \
+  /usr/local/include/opencv4/opencv2/core/cvstd.inl.hpp \
+  /usr/local/include/opencv4/opencv2/core/cvstd_wrapper.hpp \
+  /usr/local/include/opencv4/opencv2/core/fast_math.hpp \
+  /usr/local/include/opencv4/opencv2/core/hal/interface.h \
+  /usr/local/include/opencv4/opencv2/core/mat.hpp \
+  /usr/local/include/opencv4/opencv2/core/mat.inl.hpp \
+  /usr/local/include/opencv4/opencv2/core/matx.hpp \
+  /usr/local/include/opencv4/opencv2/core/matx.inl.hpp \
+  /usr/local/include/opencv4/opencv2/core/neon_utils.hpp \
+  /usr/local/include/opencv4/opencv2/core/operations.hpp \
+  /usr/local/include/opencv4/opencv2/core/optim.hpp \
+  /usr/local/include/opencv4/opencv2/core/ovx.hpp \
+  /usr/local/include/opencv4/opencv2/core/persistence.hpp \
+  /usr/local/include/opencv4/opencv2/core/saturate.hpp \
+  /usr/local/include/opencv4/opencv2/core/traits.hpp \
+  /usr/local/include/opencv4/opencv2/core/types.hpp \
+  /usr/local/include/opencv4/opencv2/core/utility.hpp \
+  /usr/local/include/opencv4/opencv2/core/utils/logger.defines.hpp \
+  /usr/local/include/opencv4/opencv2/core/utils/logger.hpp \
+  /usr/local/include/opencv4/opencv2/core/utils/logtag.hpp \
+  /usr/local/include/opencv4/opencv2/core/version.hpp \
+  /usr/local/include/opencv4/opencv2/core/vsx_utils.hpp \
+  /usr/local/include/opencv4/opencv2/dnn.hpp \
+  /usr/local/include/opencv4/opencv2/dnn/dict.hpp \
+  /usr/local/include/opencv4/opencv2/dnn/dnn.hpp \
+  /usr/local/include/opencv4/opencv2/dnn/dnn.inl.hpp \
+  /usr/local/include/opencv4/opencv2/dnn/layer.hpp \
+  /usr/local/include/opencv4/opencv2/dnn/utils/inference_engine.hpp \
+  /usr/local/include/opencv4/opencv2/dnn/version.hpp \
+  /usr/local/include/opencv4/opencv2/features2d.hpp \
+  /usr/local/include/opencv4/opencv2/flann.hpp \
+  /usr/local/include/opencv4/opencv2/flann/all_indices.h \
+  /usr/local/include/opencv4/opencv2/flann/allocator.h \
+  /usr/local/include/opencv4/opencv2/flann/any.h \
+  /usr/local/include/opencv4/opencv2/flann/autotuned_index.h \
+  /usr/local/include/opencv4/opencv2/flann/composite_index.h \
+  /usr/local/include/opencv4/opencv2/flann/config.h \
+  /usr/local/include/opencv4/opencv2/flann/defines.h \
+  /usr/local/include/opencv4/opencv2/flann/dist.h \
+  /usr/local/include/opencv4/opencv2/flann/dynamic_bitset.h \
+  /usr/local/include/opencv4/opencv2/flann/flann_base.hpp \
+  /usr/local/include/opencv4/opencv2/flann/general.h \
+  /usr/local/include/opencv4/opencv2/flann/ground_truth.h \
+  /usr/local/include/opencv4/opencv2/flann/heap.h \
+  /usr/local/include/opencv4/opencv2/flann/hierarchical_clustering_index.h \
+  /usr/local/include/opencv4/opencv2/flann/index_testing.h \
+  /usr/local/include/opencv4/opencv2/flann/kdtree_index.h \
+  /usr/local/include/opencv4/opencv2/flann/kdtree_single_index.h \
+  /usr/local/include/opencv4/opencv2/flann/kmeans_index.h \
+  /usr/local/include/opencv4/opencv2/flann/linear_index.h \
+  /usr/local/include/opencv4/opencv2/flann/logger.h \
+  /usr/local/include/opencv4/opencv2/flann/lsh_index.h \
+  /usr/local/include/opencv4/opencv2/flann/lsh_table.h \
+  /usr/local/include/opencv4/opencv2/flann/matrix.h \
+  /usr/local/include/opencv4/opencv2/flann/miniflann.hpp \
+  /usr/local/include/opencv4/opencv2/flann/nn_index.h \
+  /usr/local/include/opencv4/opencv2/flann/params.h \
+  /usr/local/include/opencv4/opencv2/flann/random.h \
+  /usr/local/include/opencv4/opencv2/flann/result_set.h \
+  /usr/local/include/opencv4/opencv2/flann/sampling.h \
+  /usr/local/include/opencv4/opencv2/flann/saving.h \
+  /usr/local/include/opencv4/opencv2/flann/timer.h \
+  /usr/local/include/opencv4/opencv2/highgui.hpp \
+  /usr/local/include/opencv4/opencv2/imgcodecs.hpp \
+  /usr/local/include/opencv4/opencv2/imgproc.hpp \
+  /usr/local/include/opencv4/opencv2/imgproc/segmentation.hpp \
+  /usr/local/include/opencv4/opencv2/ml.hpp \
+  /usr/local/include/opencv4/opencv2/ml/ml.inl.hpp \
+  /usr/local/include/opencv4/opencv2/objdetect.hpp \
+  /usr/local/include/opencv4/opencv2/objdetect/aruco_board.hpp \
+  /usr/local/include/opencv4/opencv2/objdetect/aruco_detector.hpp \
+  /usr/local/include/opencv4/opencv2/objdetect/aruco_dictionary.hpp \
+  /usr/local/include/opencv4/opencv2/objdetect/barcode.hpp \
+  /usr/local/include/opencv4/opencv2/objdetect/charuco_detector.hpp \
+  /usr/local/include/opencv4/opencv2/objdetect/detection_based_tracker.hpp \
+  /usr/local/include/opencv4/opencv2/objdetect/face.hpp \
+  /usr/local/include/opencv4/opencv2/objdetect/graphical_code_detector.hpp \
+  /usr/local/include/opencv4/opencv2/opencv.hpp \
+  /usr/local/include/opencv4/opencv2/opencv_modules.hpp \
+  /usr/local/include/opencv4/opencv2/photo.hpp \
+  /usr/local/include/opencv4/opencv2/stitching.hpp \
+  /usr/local/include/opencv4/opencv2/stitching/detail/blenders.hpp \
+  /usr/local/include/opencv4/opencv2/stitching/detail/camera.hpp \
+  /usr/local/include/opencv4/opencv2/stitching/detail/exposure_compensate.hpp \
+  /usr/local/include/opencv4/opencv2/stitching/detail/matchers.hpp \
+  /usr/local/include/opencv4/opencv2/stitching/detail/motion_estimators.hpp \
+  /usr/local/include/opencv4/opencv2/stitching/detail/seam_finders.hpp \
+  /usr/local/include/opencv4/opencv2/stitching/detail/util.hpp \
+  /usr/local/include/opencv4/opencv2/stitching/detail/util_inl.hpp \
+  /usr/local/include/opencv4/opencv2/stitching/detail/warpers.hpp \
+  /usr/local/include/opencv4/opencv2/stitching/detail/warpers_inl.hpp \
+  /usr/local/include/opencv4/opencv2/stitching/warpers.hpp \
+  /usr/local/include/opencv4/opencv2/video.hpp \
+  /usr/local/include/opencv4/opencv2/video/background_segm.hpp \
+  /usr/local/include/opencv4/opencv2/video/tracking.hpp \
+  /usr/local/include/opencv4/opencv2/videoio.hpp
 
 CMakeFiles/create_demo_video.dir/src/attention_demo/status_flags.cpp.o: /home/neilc/SocialLens/src/attention_demo/status_flags.cpp \
   /home/neilc/SocialLens/include/attention_demo/status_flags.hpp \
@@ -2189,6 +2195,10 @@ CMakeFiles/create_demo_video.dir/src/attention_demo/status_flags.cpp.o: /home/ne
 
 /home/neilc/SocialLens/src/attention_demo/overlay_renderer.cpp:
 
+/usr/local/onnxruntime/include/onnxruntime_cxx_api.h:
+
+/usr/local/onnxruntime/include/onnxruntime_c_api.h:
+
 /usr/local/include/smartspectra/video_source/settings.hpp:
 
 /usr/local/include/smartspectra/video_source/input_transformer.hpp:
@@ -2225,9 +2235,11 @@ CMakeFiles/create_demo_video.dir/src/attention_demo/status_flags.cpp.o: /home/ne
 
 /usr/local/include/physiology/interface/absl/strings/internal/str_join_internal.h:
 
-/usr/local/include/physiology/interface/absl/strings/internal/ostringstream.h:
-
 /usr/local/include/physiology/interface/absl/profiling/internal/sample_recorder.h:
+
+/usr/local/include/physiology/interface/absl/log/log_entry.h:
+
+/usr/local/include/physiology/interface/absl/log/internal/voidify.h:
 
 /usr/local/include/physiology/interface/absl/base/port.h:
 
@@ -2236,6 +2248,8 @@ CMakeFiles/create_demo_video.dir/src/attention_demo/status_flags.cpp.o: /home/ne
 /usr/local/include/physiology/interface/absl/base/optimization.h:
 
 /usr/local/include/physiology/google/protobuf/explicitly_constructed.h:
+
+/usr/local/include/opencv4/opencv2/objdetect/barcode.hpp:
 
 /usr/local/include/physiology/google/protobuf/repeated_ptr_field.h:
 
@@ -2248,8 +2262,6 @@ CMakeFiles/create_demo_video.dir/src/attention_demo/status_flags.cpp.o: /home/ne
 /usr/local/include/physiology/interface/absl/synchronization/internal/create_thread_identity.h:
 
 /usr/local/include/physiology/interface/absl/base/internal/dynamic_annotations.h:
-
-/usr/local/include/physiology/interface/absl/base/internal/atomic_hook.h:
 
 /usr/local/include/physiology/interface/absl/base/dynamic_annotations.h:
 
@@ -2277,15 +2289,9 @@ CMakeFiles/create_demo_video.dir/src/attention_demo/status_flags.cpp.o: /home/ne
 
 /usr/local/include/physiology/google/protobuf/stubs/macros.h:
 
-/usr/include/opencv4/opencv2/flann/dist.h:
-
 /usr/local/include/mediapipe/gpu/reusable_pool.h:
 
 /usr/local/include/physiology/google/protobuf/stubs/hash.h:
-
-/usr/include/opencv4/opencv2/flann/linear_index.h:
-
-/usr/local/include/physiology/google/protobuf/stubs/common.h:
 
 /usr/local/include/physiology/google/protobuf/stubs/casts.h:
 
@@ -2296,8 +2302,6 @@ CMakeFiles/create_demo_video.dir/src/attention_demo/status_flags.cpp.o: /home/ne
 /home/neilc/SocialLens/src/attention_demo/demo_video_app.cpp:
 
 /usr/include/c++/11/typeindex:
-
-/usr/include/opencv4/opencv2/ml.hpp:
 
 /usr/local/include/physiology/interface/absl/base/internal/tsan_mutex_interface.h:
 
@@ -2311,23 +2315,19 @@ CMakeFiles/create_demo_video.dir/src/attention_demo/status_flags.cpp.o: /home/ne
 
 /usr/local/include/physiology/interface/absl/strings/internal/cordz_update_tracker.h:
 
-/usr/include/opencv4/opencv2/calib3d.hpp:
-
 /usr/local/include/physiology/interface/absl/base/casts.h:
 
 /usr/include/c++/11/bits/functional_hash.h:
-
-/usr/include/opencv4/opencv2/core/fast_math.hpp:
 
 /usr/local/include/physiology/google/protobuf/arena_impl.h:
 
 /usr/include/c++/11/bits/stl_numeric.h:
 
+/usr/local/include/physiology/google/protobuf/message_lite.h:
+
 /usr/include/x86_64-linux-gnu/bits/types/sigset_t.h:
 
 /usr/include/c++/11/pstl/glue_numeric_defs.h:
-
-/usr/include/opencv4/opencv2/flann/allocator.h:
 
 /usr/local/include/physiology/google/protobuf/arena.h:
 
@@ -2338,6 +2338,8 @@ CMakeFiles/create_demo_video.dir/src/attention_demo/status_flags.cpp.o: /home/ne
 /usr/include/x86_64-linux-gnu/sys/types.h:
 
 /home/neilc/SocialLens/src/attention_demo/attention_estimator.cpp:
+
+/usr/local/include/opencv4/opencv2/core/cuda.hpp:
 
 /usr/include/x86_64-linux-gnu/c++/11/bits/messages_members.h:
 
@@ -2357,6 +2359,8 @@ CMakeFiles/create_demo_video.dir/src/attention_demo/status_flags.cpp.o: /home/ne
 
 /usr/include/x86_64-linux-gnu/bits/wctype-wchar.h:
 
+/usr/local/include/opencv4/opencv2/flann/composite_index.h:
+
 /usr/include/x86_64-linux-gnu/bits/wchar.h:
 
 /usr/local/include/physiology/interface/absl/base/internal/identity.h:
@@ -2369,6 +2373,8 @@ CMakeFiles/create_demo_video.dir/src/attention_demo/status_flags.cpp.o: /home/ne
 
 /usr/include/x86_64-linux-gnu/bits/typesizes.h:
 
+/usr/local/include/physiology/interface/absl/base/internal/low_level_alloc.h:
+
 /usr/local/include/physiology/interface/absl/container/internal/common.h:
 
 /usr/include/c++/11/bits/std_mutex.h:
@@ -2376,8 +2382,6 @@ CMakeFiles/create_demo_video.dir/src/attention_demo/status_flags.cpp.o: /home/ne
 /usr/local/include/mediapipe/framework/formats/image_format.pb.h:
 
 /usr/include/x86_64-linux-gnu/bits/types/struct_timespec.h:
-
-/usr/include/x86_64-linux-gnu/bits/types/struct_sched_param.h:
 
 /usr/include/x86_64-linux-gnu/bits/types/error_t.h:
 
@@ -2388,6 +2392,8 @@ CMakeFiles/create_demo_video.dir/src/attention_demo/status_flags.cpp.o: /home/ne
 /usr/include/x86_64-linux-gnu/bits/types/clockid_t.h:
 
 /usr/local/include/physiology/interface/absl/base/internal/spinlock.h:
+
+/usr/include/c++/11/bits/vector.tcc:
 
 /usr/local/include/physiology/interface/absl/base/attributes.h:
 
@@ -2403,7 +2409,7 @@ CMakeFiles/create_demo_video.dir/src/attention_demo/status_flags.cpp.o: /home/ne
 
 /usr/include/x86_64-linux-gnu/bits/types/__sigset_t.h:
 
-/usr/include/opencv4/opencv2/flann/result_set.h:
+/usr/local/include/opencv4/opencv2/objdetect/aruco_board.hpp:
 
 /usr/include/x86_64-linux-gnu/bits/types/__locale_t.h:
 
@@ -2411,7 +2417,13 @@ CMakeFiles/create_demo_video.dir/src/attention_demo/status_flags.cpp.o: /home/ne
 
 /usr/include/x86_64-linux-gnu/bits/types/FILE.h:
 
+/usr/include/x86_64-linux-gnu/bits/confname.h:
+
+/usr/local/include/opencv4/opencv2/dnn/dict.hpp:
+
 /usr/local/include/physiology/interface/absl/container/internal/hashtable_debug_hooks.h:
+
+/usr/include/x86_64-linux-gnu/bits/wordsize.h:
 
 /usr/include/x86_64-linux-gnu/bits/timex.h:
 
@@ -2419,15 +2431,11 @@ CMakeFiles/create_demo_video.dir/src/attention_demo/status_flags.cpp.o: /home/ne
 
 /usr/include/c++/11/bits/uniform_int_dist.h:
 
+/usr/local/include/opencv4/opencv2/stitching/warpers.hpp:
+
 /usr/include/c++/11/bits/quoted_string.h:
 
-/usr/include/opencv4/opencv2/flann/random.h:
-
-/usr/include/x86_64-linux-gnu/bits/thread-shared-types.h:
-
 /usr/include/c++/11/tr1/bessel_function.tcc:
-
-/usr/include/opencv4/opencv2/videoio.hpp:
 
 /usr/include/x86_64-linux-gnu/bits/stdint-uintn.h:
 
@@ -2437,13 +2445,15 @@ CMakeFiles/create_demo_video.dir/src/attention_demo/status_flags.cpp.o: /home/ne
 
 /usr/local/include/physiology/interface/absl/crc/crc32c.h:
 
-/usr/include/opencv4/opencv2/flann/ground_truth.h:
+/usr/local/include/opencv4/opencv2/flann/linear_index.h:
 
 /usr/include/x86_64-linux-gnu/bits/sched.h:
 
 /usr/include/x86_64-linux-gnu/bits/posix2_lim.h:
 
-/usr/include/opencv4/opencv2/objdetect/charuco_detector.hpp:
+/usr/include/x86_64-linux-gnu/bits/thread-shared-types.h:
+
+/usr/local/include/opencv4/opencv2/flann/lsh_index.h:
 
 /usr/local/include/physiology/interface/absl/strings/numbers.h:
 
@@ -2451,23 +2461,21 @@ CMakeFiles/create_demo_video.dir/src/attention_demo/status_flags.cpp.o: /home/ne
 
 /usr/include/x86_64-linux-gnu/bits/mathcalls-narrow.h:
 
-/usr/include/opencv4/opencv2/flann/nn_index.h:
-
 /usr/include/x86_64-linux-gnu/bits/math-vector.h:
 
 /usr/include/x86_64-linux-gnu/c++/11/bits/atomic_word.h:
 
 /usr/include/x86_64-linux-gnu/bits/locale.h:
 
+/usr/local/include/opencv4/opencv2/core/utility.hpp:
+
 /usr/include/x86_64-linux-gnu/bits/local_lim.h:
 
 /usr/local/include/mediapipe/framework/output_stream_shard.h:
 
-/usr/include/x86_64-linux-gnu/bits/time.h:
-
-/usr/include/c++/11/bits/locale_conv.h:
-
 /usr/include/x86_64-linux-gnu/bits/waitstatus.h:
+
+/usr/include/x86_64-linux-gnu/bits/getopt_core.h:
 
 /usr/local/include/physiology/google/protobuf/port.h:
 
@@ -2479,33 +2487,37 @@ CMakeFiles/create_demo_video.dir/src/attention_demo/status_flags.cpp.o: /home/ne
 
 /usr/include/x86_64-linux-gnu/bits/flt-eval-method.h:
 
-/usr/include/GLES3/gl32.h:
+/usr/local/include/opencv4/opencv2/core/cvdef.h:
 
-/usr/include/opencv4/opencv2/core/types.hpp:
+/usr/include/GLES3/gl32.h:
 
 /usr/include/stdc-predef.h:
 
-/usr/include/x86_64-linux-gnu/bits/errno.h:
+/usr/local/include/opencv4/opencv2/core/base.hpp:
 
 /usr/include/c++/11/bits/stl_iterator.h:
 
 /usr/local/include/mediapipe/framework/calculator_state.h:
 
+/usr/local/include/opencv4/opencv2/flann/all_indices.h:
+
 /usr/include/x86_64-linux-gnu/bits/environments.h:
+
+/usr/include/c++/11/cwchar:
+
+/usr/local/include/physiology/interface/absl/base/macros.h:
 
 /usr/include/c++/11/chrono:
 
-/usr/include/x86_64-linux-gnu/bits/endian.h:
+/usr/local/include/opencv4/opencv2/stitching/detail/seam_finders.hpp:
 
-/usr/include/opencv4/opencv2/highgui.hpp:
+/usr/include/x86_64-linux-gnu/bits/endian.h:
 
 /usr/include/x86_64-linux-gnu/c++/11/bits/os_defines.h:
 
 /usr/local/include/mediapipe/framework/deps/threadpool.h:
 
 /usr/include/c++/11/list:
-
-/usr/include/x86_64-linux-gnu/bits/types/struct___jmp_buf_tag.h:
 
 /usr/include/c++/11/tr1/special_function_util.h:
 
@@ -2517,19 +2529,21 @@ CMakeFiles/create_demo_video.dir/src/attention_demo/status_flags.cpp.o: /home/ne
 
 /usr/include/c++/11/bits/locale_facets.h:
 
-/usr/include/opencv4/opencv2/flann/kdtree_single_index.h:
+/usr/local/include/opencv4/opencv2/core/version.hpp:
 
 /usr/include/stdio.h:
+
+/usr/include/c++/11/bits/ostream_insert.h:
 
 /usr/include/c++/11/streambuf:
 
 /usr/include/locale.h:
 
+/usr/lib/gcc/x86_64-linux-gnu/11/include/stdbool.h:
+
 /usr/include/linux/errno.h:
 
 /usr/local/include/physiology/interface/absl/base/config.h:
-
-/usr/include/opencv4/opencv2/objdetect/aruco_dictionary.hpp:
 
 /usr/include/x86_64-linux-gnu/c++/11/bits/ctype_base.h:
 
@@ -2545,11 +2559,11 @@ CMakeFiles/create_demo_video.dir/src/attention_demo/status_flags.cpp.o: /home/ne
 
 /usr/include/c++/11/bits/invoke.h:
 
+/usr/local/include/opencv4/opencv2/dnn/version.hpp:
+
 /usr/local/include/physiology/interface/absl/container/internal/btree_container.h:
 
 /usr/include/c++/11/bits/stl_construct.h:
-
-/usr/local/include/physiology/interface/absl/log/log_entry.h:
 
 /usr/include/c++/11/valarray:
 
@@ -2557,17 +2571,15 @@ CMakeFiles/create_demo_video.dir/src/attention_demo/status_flags.cpp.o: /home/ne
 
 /home/neilc/SocialLens/include/attention_demo/status_flags.hpp:
 
-/usr/local/include/physiology/interface/absl/strings/internal/str_format/arg.h:
-
 /usr/include/x86_64-linux-gnu/bits/unistd_ext.h:
 
 /usr/include/c++/11/bits/std_function.h:
 
 /usr/include/c++/11/bits/sstream.tcc:
 
-/usr/include/opencv4/opencv2/video/tracking.hpp:
-
 /usr/include/c++/11/bits/specfun.h:
+
+/usr/local/include/opencv4/opencv2/flann.hpp:
 
 /usr/include/c++/11/mutex:
 
@@ -2593,15 +2605,17 @@ CMakeFiles/create_demo_video.dir/src/attention_demo/status_flags.cpp.o: /home/ne
 
 /usr/local/include/physiology/interface/absl/log/internal/strip.h:
 
-/usr/include/c++/11/bits/unique_ptr.h:
+/usr/local/include/opencv4/opencv2/objdetect.hpp:
 
 /usr/local/include/physiology/interface/absl/base/internal/thread_identity.h:
 
+/usr/local/include/opencv4/opencv2/flann/matrix.h:
+
 /usr/include/x86_64-linux-gnu/bits/types/__FILE.h:
 
-/usr/include/opencv4/opencv2/objdetect/face.hpp:
-
 /usr/include/c++/11/bits/refwrap.h:
+
+/usr/local/include/opencv4/opencv2/features2d.hpp:
 
 /usr/include/linux/close_range.h:
 
@@ -2625,6 +2639,8 @@ CMakeFiles/create_demo_video.dir/src/attention_demo/status_flags.cpp.o: /home/ne
 
 /usr/include/c++/11/bits/basic_string.tcc:
 
+/usr/local/include/physiology/interface/absl/base/internal/low_level_scheduling.h:
+
 /usr/local/include/physiology/google/protobuf/stubs/port.h:
 
 /usr/include/x86_64-linux-gnu/bits/posix1_lim.h:
@@ -2637,13 +2653,15 @@ CMakeFiles/create_demo_video.dir/src/attention_demo/status_flags.cpp.o: /home/ne
 
 /usr/local/include/mediapipe/framework/tool/validate_name.h:
 
-/usr/include/opencv4/opencv2/flann/timer.h:
+/usr/include/c++/11/bits/atomic_lockfree_defines.h:
 
 /usr/include/x86_64-linux-gnu/bits/long-double.h:
 
 /usr/include/math.h:
 
 /usr/include/c++/11/bits/stl_pair.h:
+
+/usr/local/onnxruntime/include/onnxruntime_cxx_inline.h:
 
 /usr/include/c++/11/bits/ostream.tcc:
 
@@ -2667,27 +2685,25 @@ CMakeFiles/create_demo_video.dir/src/attention_demo/status_flags.cpp.o: /home/ne
 
 /usr/local/include/mediapipe/framework/packet_type.h:
 
+/usr/local/include/physiology/interface/absl/strings/cord.h:
+
+/usr/include/x86_64-linux-gnu/bits/byteswap.h:
+
+/usr/include/c++/11/bits/mask_array.h:
+
+/usr/local/include/opencv4/opencv2/stitching/detail/warpers.hpp:
+
 /usr/include/c++/11/bits/locale_classes.h:
 
 /usr/include/c++/11/deque:
 
 /usr/include/endian.h:
 
-/usr/include/c++/11/bits/atomic_lockfree_defines.h:
-
-/usr/include/opencv4/opencv2/features2d.hpp:
-
 /usr/local/include/physiology/google/protobuf/endian.h:
 
 /usr/include/c++/11/string_view:
 
 /usr/local/include/mediapipe/gpu/gpu_buffer_storage.h:
-
-/usr/local/include/mediapipe/framework/type_map.h:
-
-/usr/include/c++/11/bits/stl_algo.h:
-
-/usr/include/x86_64-linux-gnu/bits/types/struct_itimerspec.h:
 
 /usr/include/x86_64-linux-gnu/bits/cpu-set.h:
 
@@ -2697,13 +2713,15 @@ CMakeFiles/create_demo_video.dir/src/attention_demo/status_flags.cpp.o: /home/ne
 
 /usr/local/include/mediapipe/framework/mediapipe_profiling.h:
 
+/usr/local/include/opencv4/opencv2/core/ovx.hpp:
+
 /usr/include/c++/11/bits/postypes.h:
+
+/usr/include/c++/11/cstring:
 
 /usr/local/include/physiology/google/protobuf/stubs/status.h:
 
-/usr/include/c++/11/ext/string_conversions.h:
-
-/usr/local/include/mediapipe/framework/platform_specific_profiling.h:
+/usr/include/c++/11/tr1/poly_laguerre.tcc:
 
 /usr/include/c++/11/bits/locale_facets_nonio.h:
 
@@ -2717,23 +2735,15 @@ CMakeFiles/create_demo_video.dir/src/attention_demo/status_flags.cpp.o: /home/ne
 
 /usr/include/c++/11/bits/erase_if.h:
 
-/usr/include/opencv4/opencv2/flann/heap.h:
-
 /usr/include/string.h:
-
-/usr/local/include/physiology/interface/absl/base/internal/low_level_alloc.h:
-
-/usr/include/opencv4/opencv2/core/cvdef.h:
 
 /usr/local/include/physiology/interface/absl/log/internal/config.h:
 
 /usr/include/x86_64-linux-gnu/bits/posix_opt.h:
 
+/usr/include/c++/11/initializer_list:
+
 /usr/include/c++/11/cassert:
-
-/usr/include/opencv4/opencv2/core/matx.inl.hpp:
-
-/usr/include/opencv4/opencv2/opencv_modules.hpp:
 
 /usr/include/x86_64-linux-gnu/bits/pthreadtypes-arch.h:
 
@@ -2743,13 +2753,13 @@ CMakeFiles/create_demo_video.dir/src/attention_demo/status_flags.cpp.o: /home/ne
 
 /usr/include/c++/11/bits/locale_classes.tcc:
 
+/usr/include/c++/11/bits/allocated_ptr.h:
+
 /usr/include/byteswap.h:
 
 /usr/include/c++/11/bits/range_access.h:
 
 /usr/local/include/physiology/interface/absl/base/internal/raw_logging.h:
-
-/usr/include/opencv4/opencv2/flann/matrix.h:
 
 /usr/local/include/physiology/interface/absl/base/const_init.h:
 
@@ -2793,8 +2803,6 @@ CMakeFiles/create_demo_video.dir/src/attention_demo/status_flags.cpp.o: /home/ne
 
 /usr/local/include/mediapipe/framework/formats/image_frame.h:
 
-/usr/include/opencv4/opencv2/stitching/detail/warpers.hpp:
-
 /usr/include/c++/11/bits/allocator.h:
 
 /usr/include/c++/11/bits/stl_algobase.h:
@@ -2802,6 +2810,10 @@ CMakeFiles/create_demo_video.dir/src/attention_demo/status_flags.cpp.o: /home/ne
 /usr/include/x86_64-linux-gnu/bits/time64.h:
 
 /usr/include/c++/11/bits/valarray_after.h:
+
+/usr/local/include/opencv4/opencv2/dnn/dnn.inl.hpp:
+
+/usr/local/include/opencv4/opencv2/ml.hpp:
 
 /usr/include/c++/11/bits/basic_string.h:
 
@@ -2813,19 +2825,11 @@ CMakeFiles/create_demo_video.dir/src/attention_demo/status_flags.cpp.o: /home/ne
 
 /usr/include/c++/11/atomic:
 
-/usr/include/c++/11/bits/char_traits.h:
-
 /usr/include/c++/11/cerrno:
 
 /usr/local/include/physiology/google/protobuf/metadata_lite.h:
 
 /usr/include/c++/11/iostream:
-
-/usr/include/c++/11/cwchar:
-
-/usr/local/include/physiology/interface/absl/base/macros.h:
-
-/usr/include/opencv4/opencv2/flann/kdtree_index.h:
 
 /usr/include/c++/11/bits/basic_ios.tcc:
 
@@ -2853,8 +2857,6 @@ CMakeFiles/create_demo_video.dir/src/attention_demo/status_flags.cpp.o: /home/ne
 
 /usr/local/include/mediapipe/framework/deps/proto_descriptor.pb.h:
 
-/usr/include/opencv4/opencv2/core/utils/logger.defines.hpp:
-
 /usr/local/include/physiology/interface/absl/strings/cord_buffer.h:
 
 /usr/local/include/mediapipe/framework/graph_service.h:
@@ -2873,13 +2875,9 @@ CMakeFiles/create_demo_video.dir/src/attention_demo/status_flags.cpp.o: /home/ne
 
 /usr/local/include/physiology/interface/absl/container/internal/raw_hash_map.h:
 
-/usr/local/include/physiology/google/protobuf/unknown_field_set.h:
-
 /usr/local/include/physiology/interface/absl/flags/internal/sequence_lock.h:
 
 /usr/local/include/physiology/google/protobuf/generated_message_reflection.h:
-
-/usr/include/opencv4/opencv2/objdetect.hpp:
 
 /usr/include/wchar.h:
 
@@ -2887,25 +2885,17 @@ CMakeFiles/create_demo_video.dir/src/attention_demo/status_flags.cpp.o: /home/ne
 
 /usr/include/c++/11/bits/deque.tcc:
 
-/usr/local/include/physiology/interface/nlohmann/detail/iterators/primitive_iterator.hpp:
-
-/usr/include/c++/11/bits/stl_heap.h:
-
-/usr/include/opencv4/opencv2/flann/params.h:
-
 /usr/include/c++/11/bits/align.h:
 
 /usr/local/include/physiology/google/protobuf/map.h:
 
-/usr/include/opencv4/opencv2/video/background_segm.hpp:
+/usr/local/include/physiology/modules/device_context.h:
+
+/usr/include/assert.h:
 
 /usr/include/c++/11/bits/streambuf_iterator.h:
 
 /usr/include/c++/11/debug/assertions.h:
-
-/usr/include/c++/11/tr1/modified_bessel_func.tcc:
-
-/usr/include/opencv4/opencv2/core/vsx_utils.hpp:
 
 /usr/include/c++/11/bits/charconv.h:
 
@@ -2927,15 +2917,11 @@ CMakeFiles/create_demo_video.dir/src/attention_demo/status_flags.cpp.o: /home/ne
 
 /usr/include/c++/11/clocale:
 
-/usr/include/opencv4/opencv2/ml/ml.inl.hpp:
-
 /usr/local/include/smartspectra/video_source/resolution_selection_mode.hpp:
 
 /usr/include/x86_64-linux-gnu/bits/endianness.h:
 
 /usr/include/c++/11/bits/forward_list.h:
-
-/usr/include/opencv4/opencv2/core/ovx.hpp:
 
 /usr/local/include/physiology/interface/absl/functional/any_invocable.h:
 
@@ -2951,15 +2937,19 @@ CMakeFiles/create_demo_video.dir/src/attention_demo/status_flags.cpp.o: /home/ne
 
 /usr/include/c++/11/bits/cxxabi_init_exception.h:
 
-/usr/include/opencv4/opencv2/flann/lsh_table.h:
-
 /usr/include/c++/11/algorithm:
 
 /usr/include/c++/11/bits/enable_special_members.h:
 
 /usr/include/c++/11/bits/unordered_map.h:
 
+/usr/include/x86_64-linux-gnu/bits/types/struct_sched_param.h:
+
+/usr/local/include/opencv4/opencv2/objdetect/detection_based_tracker.hpp:
+
 /usr/local/include/mediapipe/framework/deps/strong_int.h:
+
+/usr/local/include/opencv4/opencv2/core/persistence.hpp:
 
 /usr/include/c++/11/unordered_map:
 
@@ -2971,13 +2961,15 @@ CMakeFiles/create_demo_video.dir/src/attention_demo/status_flags.cpp.o: /home/ne
 
 /usr/include/c++/11/sstream:
 
-/usr/include/opencv4/opencv2/flann.hpp:
-
 /usr/include/c++/11/tr1/legendre_function.tcc:
 
 /usr/local/include/physiology/interface/absl/container/internal/btree.h:
 
 /usr/include/x86_64-linux-gnu/bits/struct_mutex.h:
+
+/usr/local/include/opencv4/opencv2/flann/heap.h:
+
+/usr/local/include/opencv4/opencv2/core/utils/logger.defines.hpp:
 
 /usr/include/x86_64-linux-gnu/bits/types/__fpos64_t.h:
 
@@ -3010,8 +3002,6 @@ CMakeFiles/create_demo_video.dir/src/attention_demo/status_flags.cpp.o: /home/ne
 /usr/local/include/physiology/interface/absl/functional/internal/any_invocable.h:
 
 /usr/include/c++/11/bits/stl_set.h:
-
-/usr/include/opencv4/opencv2/dnn/version.hpp:
 
 /usr/local/include/physiology/interface/absl/flags/marshalling.h:
 
@@ -3057,15 +3047,17 @@ CMakeFiles/create_demo_video.dir/src/attention_demo/status_flags.cpp.o: /home/ne
 
 /usr/include/c++/11/bits/unique_lock.h:
 
-/usr/include/opencv4/opencv2/core/hal/interface.h:
-
 /usr/include/c++/11/bits/alloc_traits.h:
 
 /usr/local/include/physiology/modules/messages/metrics.pb.h:
 
+/usr/local/include/opencv4/opencv2/core/matx.inl.hpp:
+
 /usr/include/x86_64-linux-gnu/bits/types/locale_t.h:
 
 /usr/include/c++/11/bits/unordered_set.h:
+
+/usr/include/x86_64-linux-gnu/bits/stdint-intn.h:
 
 /usr/local/include/mediapipe/framework/calculator_context.h:
 
@@ -3101,15 +3093,13 @@ CMakeFiles/create_demo_video.dir/src/attention_demo/status_flags.cpp.o: /home/ne
 
 /usr/local/include/mediapipe/framework/packet_set.h:
 
+/usr/local/include/opencv4/opencv2/core/cvstd_wrapper.hpp:
+
 /usr/include/c++/11/bits/locale_facets.tcc:
 
 /usr/include/c++/11/map:
 
-/usr/include/x86_64-linux-gnu/bits/wordsize.h:
-
-/usr/include/opencv4/opencv2/core.hpp:
-
-/usr/include/opencv4/opencv2/core/async.hpp:
+/usr/include/c++/11/cctype:
 
 /usr/local/include/physiology/interface/absl/hash/hash.h:
 
@@ -3135,7 +3125,13 @@ CMakeFiles/create_demo_video.dir/src/attention_demo/status_flags.cpp.o: /home/ne
 
 /usr/local/include/physiology/interface/absl/strings/internal/cord_rep_crc.h:
 
+/usr/include/c++/11/bits/unique_ptr.h:
+
+/usr/local/include/opencv4/opencv2/flann/dist.h:
+
 /usr/include/c++/11/ios:
+
+/usr/local/include/opencv4/opencv2/objdetect/aruco_dictionary.hpp:
 
 /usr/include/c++/11/ext/concurrence.h:
 
@@ -3151,8 +3147,6 @@ CMakeFiles/create_demo_video.dir/src/attention_demo/status_flags.cpp.o: /home/ne
 
 /usr/include/c++/11/bits/localefwd.h:
 
-/usr/include/opencv4/opencv2/photo.hpp:
-
 /usr/include/c++/11/limits:
 
 /usr/include/wctype.h:
@@ -3163,17 +3157,17 @@ CMakeFiles/create_demo_video.dir/src/attention_demo/status_flags.cpp.o: /home/ne
 
 /usr/local/include/mediapipe/framework/port/proto_ns.h:
 
-/usr/include/opencv4/opencv2/flann/miniflann.hpp:
-
 /usr/include/c++/11/typeinfo:
 
 /usr/local/include/physiology/google/protobuf/arenaz_sampler.h:
 
 /usr/local/include/physiology/interface/nlohmann/detail/conversions/from_json.hpp:
 
-/usr/include/c++/11/memory:
+/usr/include/c++/11/tr1/modified_bessel_func.tcc:
 
-/usr/include/opencv4/opencv2/flann/index_testing.h:
+/usr/local/include/opencv4/opencv2/core/types.hpp:
+
+/usr/include/c++/11/memory:
 
 /usr/local/include/mediapipe/framework/formats/image.h:
 
@@ -3183,7 +3177,13 @@ CMakeFiles/create_demo_video.dir/src/attention_demo/status_flags.cpp.o: /home/ne
 
 /usr/include/c++/11/ostream:
 
+/usr/include/c++/11/bits/locale_conv.h:
+
+/usr/local/include/opencv4/opencv2/flann/index_testing.h:
+
 /usr/include/c++/11/ratio:
+
+/usr/local/onnxruntime/include/onnxruntime_float16.h:
 
 /usr/local/include/mediapipe/framework/calculator_base.h:
 
@@ -3198,6 +3198,8 @@ CMakeFiles/create_demo_video.dir/src/attention_demo/status_flags.cpp.o: /home/ne
 /usr/local/include/physiology/interface/absl/base/internal/throw_delegate.h:
 
 /usr/local/include/mediapipe/framework/input_stream_shard.h:
+
+/usr/local/include/opencv4/opencv2/flann/random.h:
 
 /usr/include/c++/11/bits/hashtable.h:
 
@@ -3214,6 +3216,8 @@ CMakeFiles/create_demo_video.dir/src/attention_demo/status_flags.cpp.o: /home/ne
 /usr/include/x86_64-linux-gnu/gnu/stubs.h:
 
 /usr/include/c++/11/cwctype:
+
+/usr/local/include/physiology/interface/absl/container/internal/container_memory.h:
 
 /usr/include/c++/11/tr1/beta_function.tcc:
 
@@ -3245,6 +3249,8 @@ CMakeFiles/create_demo_video.dir/src/attention_demo/status_flags.cpp.o: /home/ne
 
 /usr/local/include/physiology/interface/absl/memory/memory.h:
 
+/usr/local/include/opencv4/opencv2/imgproc.hpp:
+
 /usr/include/x86_64-linux-gnu/bits/pthread_stack_min-dynamic.h:
 
 /usr/include/c++/11/pstl/glue_algorithm_defs.h:
@@ -3253,13 +3259,7 @@ CMakeFiles/create_demo_video.dir/src/attention_demo/status_flags.cpp.o: /home/ne
 
 /usr/local/include/mediapipe/gpu/gl_context.h:
 
-/usr/local/include/physiology/interface/absl/log/internal/voidify.h:
-
 /usr/local/include/physiology/interface/absl/numeric/int128.h:
-
-/usr/include/x86_64-linux-gnu/bits/confname.h:
-
-/usr/include/opencv4/opencv2/core/cvstd_wrapper.hpp:
 
 /usr/local/include/physiology/interface/absl/numeric/int128_have_intrinsic.inc:
 
@@ -3277,17 +3277,13 @@ CMakeFiles/create_demo_video.dir/src/attention_demo/status_flags.cpp.o: /home/ne
 
 /usr/local/include/physiology/interface/absl/status/statusor.h:
 
-/usr/include/c++/11/cctype:
-
-/usr/include/opencv4/opencv2/objdetect/graphical_code_detector.hpp:
-
 /usr/local/include/physiology/interface/absl/strings/has_absl_stringify.h:
 
 /usr/local/include/physiology/interface/absl/log/absl_check.h:
 
 /usr/local/include/physiology/interface/absl/strings/internal/cord_internal.h:
 
-/usr/include/opencv4/opencv2/stitching/detail/seam_finders.hpp:
+/usr/local/include/opencv4/opencv2/objdetect/aruco_detector.hpp:
 
 /usr/include/x86_64-linux-gnu/bits/mathcalls-helper-functions.h:
 
@@ -3305,11 +3301,17 @@ CMakeFiles/create_demo_video.dir/src/attention_demo/status_flags.cpp.o: /home/ne
 
 /usr/local/include/physiology/interface/absl/strings/internal/cordz_update_scope.h:
 
+/usr/local/include/opencv4/opencv2/core/cvstd.inl.hpp:
+
+/usr/local/include/physiology/interface/absl/strings/internal/resize_uninitialized.h:
+
 /usr/local/include/physiology/interface/absl/strings/internal/str_format/bind.h:
 
 /usr/include/c++/11/bits/stl_tempbuf.h:
 
 /usr/local/include/mediapipe/framework/output_side_packet_impl.h:
+
+/usr/local/include/opencv4/opencv2/flann/nn_index.h:
 
 /usr/include/time.h:
 
@@ -3317,11 +3319,11 @@ CMakeFiles/create_demo_video.dir/src/attention_demo/status_flags.cpp.o: /home/ne
 
 /usr/local/include/mediapipe/framework/deps/status_builder.h:
 
-/usr/local/include/mediapipe/framework/port.h:
-
 /usr/local/include/physiology/interface/nlohmann/detail/input/lexer.hpp:
 
 /usr/local/include/physiology/interface/absl/strings/internal/str_format/extension.h:
+
+/usr/local/include/opencv4/opencv2/core/operations.hpp:
 
 /usr/include/x86_64-linux-gnu/bits/types/struct_tm.h:
 
@@ -3343,8 +3345,6 @@ CMakeFiles/create_demo_video.dir/src/attention_demo/status_flags.cpp.o: /home/ne
 
 /usr/local/include/physiology/interface/absl/time/internal/cctz/include/cctz/civil_time.h:
 
-/usr/local/include/physiology/interface/absl/time/internal/cctz/include/cctz/civil_time_detail.h:
-
 /usr/include/x86_64-linux-gnu/bits/floatn.h:
 
 /usr/local/include/physiology/interface/absl/container/internal/hashtablez_sampler.h:
@@ -3363,9 +3363,7 @@ CMakeFiles/create_demo_video.dir/src/attention_demo/status_flags.cpp.o: /home/ne
 
 /usr/local/include/physiology/interface/absl/types/variant.h:
 
-/usr/local/include/physiology/interface/absl/strings/internal/resize_uninitialized.h:
-
-/usr/include/opencv4/opencv2/core/matx.hpp:
+/usr/local/include/opencv4/opencv2/flann/lsh_table.h:
 
 /usr/local/include/physiology/interface/absl/utility/utility.h:
 
@@ -3377,23 +3375,17 @@ CMakeFiles/create_demo_video.dir/src/attention_demo/status_flags.cpp.o: /home/ne
 
 /usr/local/include/physiology/interface/nlohmann/detail/input/binary_reader.hpp:
 
-/usr/include/c++/11/codecvt:
-
 /usr/local/include/physiology/interface/nlohmann/detail/input/input_adapters.hpp:
 
 /usr/local/include/physiology/interface/nlohmann/detail/input/json_sax.hpp:
 
 /usr/local/include/mediapipe/framework/mediapipe_options.pb.h:
 
-/usr/local/include/physiology/interface/nlohmann/detail/input/parser.hpp:
-
 /usr/local/include/physiology/interface/absl/flags/internal/registry.h:
 
 /usr/local/include/physiology/interface/absl/crc/internal/crc32c_inline.h:
 
 /usr/local/include/physiology/interface/nlohmann/detail/input/position_t.hpp:
-
-/usr/include/opencv4/opencv2/stitching/detail/util.hpp:
 
 /usr/local/include/physiology/interface/nlohmann/detail/json_pointer.hpp:
 
@@ -3407,31 +3399,23 @@ CMakeFiles/create_demo_video.dir/src/attention_demo/status_flags.cpp.o: /home/ne
 
 /usr/local/include/physiology/interface/nlohmann/detail/meta/void_t.hpp:
 
-/usr/include/opencv4/opencv2/stitching.hpp:
-
-/usr/local/include/physiology/interface/absl/container/internal/inlined_vector.h:
-
-/usr/local/include/physiology/interface/nlohmann/detail/macro_scope.hpp:
-
 /usr/local/include/physiology/interface/nlohmann/detail/macro_unscope.hpp:
 
 /usr/local/include/physiology/interface/nlohmann/detail/meta/cpp_future.hpp:
 
 /usr/local/include/physiology/interface/nlohmann/detail/meta/detected.hpp:
 
-/usr/include/opencv4/opencv2/stitching/detail/blenders.hpp:
-
 /usr/local/include/mediapipe/framework/deps/no_destructor.h:
+
+/usr/local/include/physiology/interface/absl/strings/internal/ostringstream.h:
+
+/usr/local/include/opencv4/opencv2/imgproc/segmentation.hpp:
 
 /usr/local/include/physiology/interface/nlohmann/detail/meta/is_sax.hpp:
 
+/usr/local/include/opencv4/opencv2/flann/timer.h:
+
 /usr/local/include/physiology/interface/nlohmann/detail/meta/type_traits.hpp:
-
-/usr/include/x86_64-linux-gnu/bits/getopt_core.h:
-
-/usr/include/opencv4/opencv2/stitching/detail/util_inl.hpp:
-
-/usr/include/opencv4/opencv2/flann/kmeans_index.h:
 
 /usr/local/include/physiology/interface/nlohmann/detail/output/binary_writer.hpp:
 
@@ -3453,6 +3437,10 @@ CMakeFiles/create_demo_video.dir/src/attention_demo/status_flags.cpp.o: /home/ne
 
 /usr/local/include/physiology/interface/nlohmann/json_fwd.hpp:
 
+/usr/include/x86_64-linux-gnu/bits/errno.h:
+
+/usr/local/include/opencv4/opencv2/flann/any.h:
+
 /usr/include/c++/11/bits/stl_function.h:
 
 /usr/include/inttypes.h:
@@ -3469,11 +3457,11 @@ CMakeFiles/create_demo_video.dir/src/attention_demo/status_flags.cpp.o: /home/ne
 
 /usr/local/include/physiology/interface/glog/vlog_is_on.h:
 
+/home/neilc/SocialLens/emotion_detector/EmotionDetector.hpp:
+
+/usr/local/include/opencv4/opencv2/flann/sampling.h:
+
 /home/neilc/SocialLens/include/attention_demo/overlay_renderer.hpp:
-
-/usr/local/include/physiology/interface/absl/base/internal/low_level_scheduling.h:
-
-/usr/include/opencv4/opencv2/core/cv_cpu_dispatch.h:
 
 /usr/include/EGL/eglplatform.h:
 
@@ -3487,15 +3475,9 @@ CMakeFiles/create_demo_video.dir/src/attention_demo/status_flags.cpp.o: /home/ne
 
 /usr/include/c++/11/bits/fs_fwd.h:
 
-/usr/include/opencv4/opencv2/flann/general.h:
-
 /usr/include/c++/11/cstdlib:
 
 /usr/include/c++/11/bits/fs_path.h:
-
-/usr/local/include/physiology/google/protobuf/message_lite.h:
-
-/usr/include/opencv4/opencv2/core/affine.hpp:
 
 /usr/include/c++/11/bits/functexcept.h:
 
@@ -3503,9 +3485,15 @@ CMakeFiles/create_demo_video.dir/src/attention_demo/status_flags.cpp.o: /home/ne
 
 /usr/include/c++/11/bits/stl_list.h:
 
+/usr/include/c++/11/bits/char_traits.h:
+
+/usr/local/include/opencv4/opencv2/opencv.hpp:
+
 /usr/include/c++/11/bits/stl_queue.h:
 
 /usr/include/c++/11/bitset:
+
+/usr/local/include/opencv4/opencv2/core/optim.hpp:
 
 /usr/include/c++/11/cfloat:
 
@@ -3520,156 +3508,6 @@ CMakeFiles/create_demo_video.dir/src/attention_demo/status_flags.cpp.o: /home/ne
 /usr/include/c++/11/math.h:
 
 /usr/include/c++/11/queue:
-
-/usr/include/opencv4/opencv2/core/base.hpp:
-
-/usr/include/opencv4/opencv2/core/bufferpool.hpp:
-
-/usr/include/c++/11/bits/vector.tcc:
-
-/usr/include/opencv4/opencv2/core/check.hpp:
-
-/usr/include/c++/11/initializer_list:
-
-/usr/include/opencv4/opencv2/core/cuda.hpp:
-
-/usr/local/include/mediapipe/framework/output_side_packet.h:
-
-/usr/include/opencv4/opencv2/core/cuda.inl.hpp:
-
-/usr/include/opencv4/opencv2/flann/lsh_index.h:
-
-/usr/include/opencv4/opencv2/core/cvstd.hpp:
-
-/usr/local/include/mediapipe/framework/packet.h:
-
-/usr/include/opencv4/opencv2/core/cvstd.inl.hpp:
-
-/usr/include/opencv4/opencv2/core/mat.hpp:
-
-/usr/local/include/physiology/interface/absl/container/internal/container_memory.h:
-
-/usr/include/opencv4/opencv2/core/mat.inl.hpp:
-
-/usr/include/c++/11/cstring:
-
-/usr/include/opencv4/opencv2/core/neon_utils.hpp:
-
-/usr/local/include/mediapipe/framework/output_stream.h:
-
-/usr/include/opencv4/opencv2/core/operations.hpp:
-
-/usr/include/opencv4/opencv2/flann/sampling.h:
-
-/usr/include/opencv4/opencv2/dnn.hpp:
-
-/usr/include/opencv4/opencv2/core/persistence.hpp:
-
-/usr/include/opencv4/opencv2/core/saturate.hpp:
-
-/usr/include/opencv4/opencv2/core/traits.hpp:
-
-/usr/include/opencv4/opencv2/core/utility.hpp:
-
-/usr/include/opencv4/opencv2/flann/config.h:
-
-/usr/include/opencv4/opencv2/core/utils/logger.hpp:
-
-/usr/include/opencv4/opencv2/core/utils/logtag.hpp:
-
-/usr/local/include/mediapipe/gpu/frame_buffer_view.h:
-
-/usr/local/include/mediapipe/gpu/gl_texture_buffer_pool.h:
-
-/usr/include/opencv4/opencv2/dnn/dict.hpp:
-
-/usr/include/x86_64-linux-gnu/bits/stdint-intn.h:
-
-/usr/include/opencv4/opencv2/dnn/dnn.hpp:
-
-/usr/include/opencv4/opencv2/dnn/dnn.inl.hpp:
-
-/usr/include/opencv4/opencv2/dnn/layer.hpp:
-
-/usr/local/include/mediapipe/gpu/gl_texture_buffer.h:
-
-/usr/local/include/physiology/interface/absl/strings/cord.h:
-
-/usr/include/x86_64-linux-gnu/bits/byteswap.h:
-
-/usr/include/c++/11/bits/mask_array.h:
-
-/usr/include/opencv4/opencv2/dnn/utils/inference_engine.hpp:
-
-/usr/include/opencv4/opencv2/stitching/detail/motion_estimators.hpp:
-
-/usr/include/opencv4/opencv2/flann/all_indices.h:
-
-/usr/include/opencv4/opencv2/flann/any.h:
-
-/usr/local/include/mediapipe/framework/deps/safe_int.h:
-
-/usr/include/opencv4/opencv2/stitching/detail/exposure_compensate.hpp:
-
-/usr/include/opencv4/opencv2/flann/autotuned_index.h:
-
-/usr/local/include/physiology/interface/absl/container/internal/layout.h:
-
-/usr/local/include/physiology/modules/device_context.h:
-
-/usr/include/assert.h:
-
-/usr/include/opencv4/opencv2/flann/composite_index.h:
-
-/usr/local/include/mediapipe/framework/input_stream.h:
-
-/usr/include/c++/11/bits/allocated_ptr.h:
-
-/usr/include/opencv4/opencv2/flann/defines.h:
-
-/usr/include/opencv4/opencv2/flann/dynamic_bitset.h:
-
-/usr/include/opencv4/opencv2/flann/flann_base.hpp:
-
-/usr/local/include/mediapipe/framework/formats/frame_buffer.h:
-
-/usr/include/opencv4/opencv2/flann/hierarchical_clustering_index.h:
-
-/usr/include/opencv4/opencv2/flann/logger.h:
-
-/usr/include/opencv4/opencv2/flann/saving.h:
-
-/usr/include/opencv4/opencv2/imgproc.hpp:
-
-/usr/include/opencv4/opencv2/imgproc/segmentation.hpp:
-
-/usr/include/opencv4/opencv2/core/version.hpp:
-
-/usr/local/include/mediapipe/framework/graph_output_stream.h:
-
-/usr/include/c++/11/tr1/poly_laguerre.tcc:
-
-/usr/include/opencv4/opencv2/objdetect/aruco_board.hpp:
-
-/usr/include/opencv4/opencv2/objdetect/aruco_detector.hpp:
-
-/usr/include/c++/11/bits/ostream_insert.h:
-
-/usr/include/opencv4/opencv2/objdetect/barcode.hpp:
-
-/usr/include/opencv4/opencv2/stitching/detail/camera.hpp:
-
-/usr/include/opencv4/opencv2/objdetect/detection_based_tracker.hpp:
-
-/usr/include/opencv4/opencv2/opencv.hpp:
-
-/usr/include/opencv4/opencv2/stitching/detail/matchers.hpp:
-
-/usr/include/opencv4/opencv2/stitching/detail/warpers_inl.hpp:
-
-/usr/include/opencv4/opencv2/stitching/warpers.hpp:
-
-/usr/include/opencv4/opencv2/video.hpp:
 
 /usr/include/asm-generic/errno.h:
 
@@ -3693,15 +3531,11 @@ CMakeFiles/create_demo_video.dir/src/attention_demo/status_flags.cpp.o: /home/ne
 
 /usr/include/x86_64-linux-gnu/bits/types/wint_t.h:
 
-/usr/include/opencv4/opencv2/core/optim.hpp:
-
 /usr/local/include/mediapipe/framework/calculator_contract.h:
 
 /usr/local/include/mediapipe/framework/calculator_graph.h:
 
 /usr/local/include/mediapipe/framework/calculator_node.h:
-
-/usr/local/include/physiology/interface/absl/log/internal/nullguard.h:
 
 /usr/local/include/mediapipe/framework/port/logging.h:
 
@@ -3709,11 +3543,13 @@ CMakeFiles/create_demo_video.dir/src/attention_demo/status_flags.cpp.o: /home/ne
 
 /usr/local/include/mediapipe/framework/collection_item_id.h:
 
+/usr/local/include/opencv4/opencv2/flann/saving.h:
+
+/usr/local/include/opencv4/opencv2/dnn/dnn.hpp:
+
 /usr/local/include/mediapipe/framework/counter.h:
 
 /usr/local/include/physiology/google/protobuf/port_def.inc:
-
-/usr/include/opencv4/opencv2/core/cuda_types.hpp:
 
 /usr/local/include/mediapipe/framework/demangle.h:
 
@@ -3727,11 +3563,11 @@ CMakeFiles/create_demo_video.dir/src/attention_demo/status_flags.cpp.o: /home/ne
 
 /usr/local/include/mediapipe/framework/deps/registration_token.h:
 
-/usr/local/include/physiology/interface/nlohmann/detail/iterators/json_reverse_iterator.hpp:
+/usr/local/include/physiology/interface/absl/strings/internal/str_format/arg.h:
 
-/usr/local/include/physiology/interface/nlohmann/detail/conversions/to_json.hpp:
+/usr/local/include/opencv4/opencv2/imgcodecs.hpp:
 
-/usr/local/include/mediapipe/framework/deps/source_location.h:
+/usr/local/include/mediapipe/framework/deps/safe_int.h:
 
 /usr/local/include/mediapipe/framework/deps/status.h:
 
@@ -3749,6 +3585,10 @@ CMakeFiles/create_demo_video.dir/src/attention_demo/status_flags.cpp.o: /home/ne
 
 /usr/local/include/mediapipe/framework/executor.h:
 
+/usr/local/include/mediapipe/framework/formats/frame_buffer.h:
+
+/usr/local/include/mediapipe/framework/graph_output_stream.h:
+
 /usr/local/include/physiology/interface/absl/flags/config.h:
 
 /usr/local/include/mediapipe/framework/graph_service_manager.h:
@@ -3756,6 +3596,12 @@ CMakeFiles/create_demo_video.dir/src/attention_demo/status_flags.cpp.o: /home/ne
 /usr/include/c++/11/bits/ios_base.h:
 
 /usr/local/include/mediapipe/framework/input_side_packet_handler.h:
+
+/usr/local/include/physiology/interface/nlohmann/detail/input/parser.hpp:
+
+/usr/local/include/opencv4/opencv2/objdetect/graphical_code_detector.hpp:
+
+/usr/local/include/mediapipe/framework/input_stream.h:
 
 /home/neilc/SocialLens/include/attention_demo/attention_estimator.hpp:
 
@@ -3767,6 +3613,10 @@ CMakeFiles/create_demo_video.dir/src/attention_demo/status_flags.cpp.o: /home/ne
 
 /usr/local/include/mediapipe/framework/legacy_calculator_support.h:
 
+/usr/local/include/mediapipe/framework/output_side_packet.h:
+
+/usr/local/include/mediapipe/framework/output_stream.h:
+
 /usr/local/include/mediapipe/framework/output_stream_manager.h:
 
 /usr/include/pthread.h:
@@ -3775,7 +3625,15 @@ CMakeFiles/create_demo_video.dir/src/attention_demo/status_flags.cpp.o: /home/ne
 
 /usr/local/include/mediapipe/framework/output_stream_poller.h:
 
+/usr/local/include/mediapipe/framework/packet.h:
+
+/usr/local/include/opencv4/opencv2/core/traits.hpp:
+
 /usr/local/include/mediapipe/framework/packet_factory.pb.h:
+
+/usr/local/include/physiology/google/protobuf/stubs/common.h:
+
+/usr/local/include/opencv4/opencv2/stitching/detail/camera.hpp:
 
 /usr/local/include/mediapipe/framework/packet_generator_graph.h:
 
@@ -3797,7 +3655,19 @@ CMakeFiles/create_demo_video.dir/src/attention_demo/status_flags.cpp.o: /home/ne
 
 /usr/local/include/mediapipe/framework/port/port.h:
 
+/usr/local/include/opencv4/opencv2/core/cuda_types.hpp:
+
 /usr/local/include/mediapipe/framework/port/ret_check.h:
+
+/usr/local/include/mediapipe/framework/type_map.h:
+
+/usr/include/c++/11/bits/stl_algo.h:
+
+/usr/local/include/opencv4/opencv2/core.hpp:
+
+/usr/local/include/physiology/google/protobuf/unknown_field_set.h:
+
+/usr/local/include/opencv4/opencv2/dnn/utils/inference_engine.hpp:
 
 /usr/local/include/mediapipe/framework/port/status.h:
 
@@ -3827,9 +3697,15 @@ CMakeFiles/create_demo_video.dir/src/attention_demo/status_flags.cpp.o: /home/ne
 
 /usr/local/include/mediapipe/framework/tool/options_map.h:
 
-/usr/local/include/mediapipe/framework/tool/type_util.h:
+/usr/local/include/opencv4/opencv2/core/mat.inl.hpp:
 
 /usr/local/include/mediapipe/gpu/gl_base.h:
+
+/usr/local/include/mediapipe/gpu/gl_texture_buffer.h:
+
+/usr/local/include/mediapipe/gpu/frame_buffer_view.h:
+
+/usr/local/include/mediapipe/gpu/gl_texture_buffer_pool.h:
 
 /usr/local/include/mediapipe/gpu/gl_texture_view.h:
 
@@ -3841,13 +3717,153 @@ CMakeFiles/create_demo_video.dir/src/attention_demo/status_flags.cpp.o: /home/ne
 
 /usr/local/include/mediapipe/gpu/gpu_buffer_format.h:
 
-/usr/local/include/mediapipe/gpu/gpu_buffer_multi_pool.h:
-
 /usr/local/include/mediapipe/gpu/gpu_buffer_storage_image_frame.h:
 
 /usr/local/include/mediapipe/gpu/multi_pool.h:
 
 /usr/local/include/mediapipe/util/resource_cache.h:
+
+/usr/local/include/opencv4/opencv2/calib3d.hpp:
+
+/usr/local/include/opencv4/opencv2/core/affine.hpp:
+
+/usr/local/include/opencv4/opencv2/core/async.hpp:
+
+/usr/local/include/opencv4/opencv2/core/bufferpool.hpp:
+
+/usr/include/x86_64-linux-gnu/bits/types/struct_itimerspec.h:
+
+/usr/local/include/opencv4/opencv2/core/neon_utils.hpp:
+
+/usr/local/include/opencv4/opencv2/core/check.hpp:
+
+/usr/local/include/opencv4/opencv2/core/cuda.inl.hpp:
+
+/usr/local/include/physiology/interface/absl/log/internal/nullguard.h:
+
+/usr/local/include/opencv4/opencv2/core/cv_cpu_dispatch.h:
+
+/usr/local/include/opencv4/opencv2/core/cvstd.hpp:
+
+/usr/include/c++/11/ext/string_conversions.h:
+
+/usr/local/include/mediapipe/framework/platform_specific_profiling.h:
+
+/usr/local/include/opencv4/opencv2/core/fast_math.hpp:
+
+/usr/include/x86_64-linux-gnu/bits/types/struct___jmp_buf_tag.h:
+
+/usr/local/include/opencv4/opencv2/core/hal/interface.h:
+
+/usr/local/include/opencv4/opencv2/core/mat.hpp:
+
+/usr/local/include/opencv4/opencv2/core/matx.hpp:
+
+/usr/local/include/opencv4/opencv2/core/saturate.hpp:
+
+/usr/local/include/opencv4/opencv2/core/utils/logger.hpp:
+
+/usr/local/include/opencv4/opencv2/core/utils/logtag.hpp:
+
+/usr/include/x86_64-linux-gnu/bits/time.h:
+
+/usr/local/include/opencv4/opencv2/core/vsx_utils.hpp:
+
+/usr/local/include/opencv4/opencv2/dnn.hpp:
+
+/usr/local/include/opencv4/opencv2/flann/allocator.h:
+
+/usr/local/include/opencv4/opencv2/flann/autotuned_index.h:
+
+/usr/local/include/opencv4/opencv2/flann/config.h:
+
+/usr/local/include/opencv4/opencv2/flann/defines.h:
+
+/usr/local/include/mediapipe/framework/tool/type_util.h:
+
+/usr/local/include/opencv4/opencv2/flann/dynamic_bitset.h:
+
+/usr/local/include/opencv4/opencv2/flann/flann_base.hpp:
+
+/usr/local/include/physiology/interface/nlohmann/detail/iterators/json_reverse_iterator.hpp:
+
+/usr/local/include/physiology/interface/nlohmann/detail/conversions/to_json.hpp:
+
+/usr/local/include/mediapipe/framework/deps/source_location.h:
+
+/usr/local/include/opencv4/opencv2/flann/general.h:
+
+/usr/local/include/opencv4/opencv2/flann/ground_truth.h:
+
+/usr/local/include/opencv4/opencv2/flann/hierarchical_clustering_index.h:
+
+/usr/local/include/opencv4/opencv2/flann/kdtree_index.h:
+
+/usr/local/include/physiology/interface/absl/flags/commandlineflag.h:
+
+/usr/local/include/physiology/interface/absl/base/internal/atomic_hook.h:
+
+/usr/local/include/opencv4/opencv2/flann/kdtree_single_index.h:
+
+/usr/local/include/opencv4/opencv2/flann/logger.h:
+
+/usr/local/include/physiology/interface/absl/time/internal/cctz/include/cctz/civil_time_detail.h:
+
+/usr/local/include/opencv4/opencv2/flann/miniflann.hpp:
+
+/usr/local/include/physiology/interface/nlohmann/detail/iterators/primitive_iterator.hpp:
+
+/usr/include/c++/11/bits/stl_heap.h:
+
+/usr/local/include/opencv4/opencv2/flann/result_set.h:
+
+/usr/local/include/opencv4/opencv2/highgui.hpp:
+
+/usr/local/include/opencv4/opencv2/flann/params.h:
+
+/usr/local/include/opencv4/opencv2/ml/ml.inl.hpp:
+
+/usr/local/include/opencv4/opencv2/objdetect/charuco_detector.hpp:
+
+/usr/local/include/opencv4/opencv2/objdetect/face.hpp:
+
+/usr/local/include/opencv4/opencv2/opencv_modules.hpp:
+
+/usr/include/c++/11/codecvt:
+
+/usr/local/include/opencv4/opencv2/photo.hpp:
+
+/usr/local/include/opencv4/opencv2/stitching.hpp:
+
+/usr/local/include/opencv4/opencv2/stitching/detail/blenders.hpp:
+
+/usr/local/include/physiology/interface/absl/container/internal/inlined_vector.h:
+
+/usr/local/include/physiology/interface/nlohmann/detail/macro_scope.hpp:
+
+/usr/local/include/opencv4/opencv2/stitching/detail/exposure_compensate.hpp:
+
+/usr/local/include/mediapipe/framework/port.h:
+
+/usr/local/include/opencv4/opencv2/stitching/detail/motion_estimators.hpp:
+
+/usr/local/include/opencv4/opencv2/dnn/layer.hpp:
+
+/usr/local/include/opencv4/opencv2/stitching/detail/util.hpp:
+
+/usr/local/include/opencv4/opencv2/stitching/detail/warpers_inl.hpp:
+
+/usr/local/include/opencv4/opencv2/stitching/detail/matchers.hpp:
+
+/usr/local/include/opencv4/opencv2/video.hpp:
+
+/usr/local/include/opencv4/opencv2/video/tracking.hpp:
+
+/usr/local/include/opencv4/opencv2/video/background_segm.hpp:
+
+/usr/local/include/mediapipe/gpu/gpu_buffer_multi_pool.h:
+
+/usr/local/include/opencv4/opencv2/videoio.hpp:
 
 /usr/local/include/physiology/google/protobuf/generated_message_bases.h:
 
@@ -3861,23 +3877,25 @@ CMakeFiles/create_demo_video.dir/src/attention_demo/status_flags.cpp.o: /home/ne
 
 /usr/local/include/physiology/google/protobuf/descriptor.h:
 
+/usr/local/include/opencv4/opencv2/stitching/detail/util_inl.hpp:
+
 /usr/local/include/physiology/interface/absl/container/flat_hash_map.h:
 
 /usr/local/include/physiology/interface/absl/container/flat_hash_set.h:
 
 /usr/local/include/physiology/interface/absl/container/internal/hash_function_defaults.h:
 
-/usr/local/include/physiology/interface/absl/container/internal/raw_hash_set.h:
+/usr/local/include/physiology/interface/absl/container/internal/layout.h:
 
-/usr/local/include/physiology/interface/absl/flags/commandlineflag.h:
+/usr/local/include/physiology/interface/absl/container/internal/raw_hash_set.h:
 
 /usr/include/x86_64-linux-gnu/bits/types/cookie_io_functions_t.h:
 
 /usr/local/include/physiology/interface/absl/flags/flag.h:
 
-/usr/include/opencv4/opencv2/imgcodecs.hpp:
-
 /usr/local/include/physiology/interface/absl/flags/internal/flag.h:
+
+/usr/local/include/opencv4/opencv2/flann/kmeans_index.h:
 
 /usr/local/include/physiology/interface/absl/hash/internal/city.h:
 

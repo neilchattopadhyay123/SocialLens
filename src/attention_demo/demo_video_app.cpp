@@ -3,6 +3,7 @@
 #include "attention_demo/attention_estimator.hpp"
 #include "attention_demo/overlay_renderer.hpp"
 #include "attention_demo/status_flags.hpp"
+#include "EmotionDetector.hpp"
 
 #include <smartspectra/container/foreground_container.hpp>
 #include <smartspectra/container/settings.hpp>
@@ -11,9 +12,13 @@
 #include <opencv2/opencv.hpp>
 
 #include <cmath>
+#include <filesystem>
 #include <iostream>
+#include <limits>
+#include <memory>
 #include <mutex>
 #include <string>
+#include <vector>
 
 namespace attention_demo {
 
@@ -80,6 +85,49 @@ int DemoVideoApp::Run(const std::string& api_key,
         }
         std::cout << "Video writer configured at " << output_fps << " FPS (codec fourcc=" << selected_fourcc << ")\n";
 
+        std::string emotion_model_path;
+        for (const std::string& candidate : {
+                 std::string("emotion_detector/emo_affectnet_opencv.onnx"),
+                 std::string("../emotion_detector/emo_affectnet_opencv.onnx"),
+                 std::string("emotion_detector/emo_affectnet.onnx"),
+                 std::string("../emotion_detector/emo_affectnet.onnx"),
+                 std::string("./emo_affectnet.onnx")
+             }) {
+            if (std::filesystem::exists(candidate)) {
+                emotion_model_path = candidate;
+                break;
+            }
+        }
+        std::unique_ptr<EmotionDetector> emotion_detector;
+        bool emotion_enabled = false;
+        if (emotion_model_path.empty()) {
+            std::cout << "Warning: emotion model file not found; continuing without emotion detection.\n";
+        } else {
+            try {
+                emotion_detector = std::make_unique<EmotionDetector>(emotion_model_path);
+                emotion_enabled = true;
+            } catch (const std::exception& e) {
+                std::cout << "Warning: failed to initialize ONNX emotion detector (" << e.what()
+                          << "); continuing without emotion detection.\n";
+            }
+        }
+
+        cv::CascadeClassifier face_cascade;
+        bool face_cascade_loaded = false;
+        for (const std::string& candidate : {
+                 std::string("/usr/share/opencv4/haarcascades/haarcascade_frontalface_default.xml"),
+                 std::string("/usr/share/opencv/haarcascades/haarcascade_frontalface_default.xml"),
+                 std::string("haarcascade_frontalface_default.xml")
+             }) {
+            if (std::filesystem::exists(candidate) && face_cascade.load(candidate)) {
+                face_cascade_loaded = true;
+                break;
+            }
+        }
+        if (!face_cascade_loaded) {
+            std::cout << "Warning: Haar cascade not found; emotion classification will use full frame.\n";
+        }
+
         std::mutex state_mutex;
         StatusFlags status_flags;
         AttentionEstimator estimator;
@@ -115,7 +163,15 @@ int DemoVideoApp::Run(const std::string& api_key,
         }
 
         status = container->SetOnVideoOutput(
-            [&writer, &state_mutex, &estimator, output_width, output_height](cv::Mat& frame, int64_t) {
+            [&writer,
+             &state_mutex,
+             &estimator,
+             &emotion_detector,
+             emotion_enabled,
+             &face_cascade,
+             face_cascade_loaded,
+             output_width,
+             output_height](cv::Mat& frame, int64_t) {
                 if (frame.cols != output_width || frame.rows != output_height) {
                     cv::resize(frame, frame, cv::Size(output_width, output_height));
                 }
@@ -125,6 +181,46 @@ int DemoVideoApp::Run(const std::string& api_key,
                     std::lock_guard<std::mutex> lock(state_mutex);
                     score = estimator.attention_score();
                 }
+
+                std::string emotion = emotion_enabled ? "Unknown" : "Unavailable";
+                if (emotion_enabled && emotion_detector && !frame.empty()) {
+                    cv::Mat face_crop = frame;
+                    if (face_cascade_loaded) {
+                        cv::Mat gray;
+                        cv::cvtColor(frame, gray, cv::COLOR_BGR2GRAY);
+                        std::vector<cv::Rect> faces;
+                        face_cascade.detectMultiScale(gray, faces, 1.1, 5, 0, cv::Size(80, 80));
+
+                        if (!faces.empty()) {
+                            int best_idx = 0;
+                            int best_area = std::numeric_limits<int>::min();
+                            for (size_t i = 0; i < faces.size(); ++i) {
+                                const int area = faces[i].width * faces[i].height;
+                                if (area > best_area) {
+                                    best_area = area;
+                                    best_idx = static_cast<int>(i);
+                                }
+                            }
+                            const cv::Rect clamped = faces[best_idx] & cv::Rect(0, 0, frame.cols, frame.rows);
+                            face_crop = frame(clamped);
+                        }
+                    }
+
+                    try {
+                        emotion = emotion_detector->predict(face_crop);
+                    } catch (const std::exception&) {
+                        emotion = "Unavailable";
+                    }
+                }
+
+                cv::putText(frame,
+                            "Emotion: " + emotion,
+                            cv::Point(30, 40),
+                            cv::FONT_HERSHEY_SIMPLEX,
+                            0.9,
+                            cv::Scalar(255, 255, 255),
+                            2,
+                            cv::LINE_AA);
 
                 DrawAttentionOverlay(frame, score, output_height);
                 writer.write(frame);

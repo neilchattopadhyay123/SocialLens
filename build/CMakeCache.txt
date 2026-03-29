@@ -208,6 +208,15 @@ HOST_GRPC_PLUGIN_PATH:FILEPATH=/usr/local/bin/grpc_cpp_plugin
 HOST_PROTOC_PATH:FILEPATH=/usr/local/bin/protoc
 
 //Path to a file.
+ONNXRUNTIME_INCLUDE_DIR:PATH=/usr/local/onnxruntime/include
+
+//Path to a library.
+ONNXRUNTIME_LIBRARY:FILEPATH=/usr/local/onnxruntime/lib/libonnxruntime.so
+
+//Path to ONNX Runtime installation root
+ONNXRUNTIME_ROOT:PATH=/usr/local/onnxruntime
+
+//Path to a file.
 OPENGL_EGL_INCLUDE_DIR:PATH=/usr/include
 
 //Path to a file.
@@ -252,8 +261,8 @@ OPENSSL_INCLUDE_DIR:PATH=/usr/include
 //Path to a library.
 OPENSSL_SSL_LIBRARY:FILEPATH=/usr/lib/x86_64-linux-gnu/libssl.so
 
-//The directory containing a CMake configuration file for OpenCV.
-OpenCV_DIR:PATH=/usr/lib/x86_64-linux-gnu/cmake/opencv4
+//No help, variable specified on the command line.
+OpenCV_DIR:UNINITIALIZED=/usr/local/lib/cmake/opencv4
 
 //Directory of the Physiology computation graphs.
 PHYSIOLOGY_EDGE_GRAPH_DIRECTORY:FILEPATH=/usr/local/share/physiology/graph
@@ -457,7 +466,7 @@ CURL_LIBRARY_RELEASE-ADVANCED:INTERNAL=1
 //Details about finding CURL
 FIND_PACKAGE_MESSAGE_DETAILS_CURL:INTERNAL=[/usr/lib/x86_64-linux-gnu/libcurl.so][/usr/include/x86_64-linux-gnu][c ][v7.81.0()]
 //Details about finding OpenCV
-FIND_PACKAGE_MESSAGE_DETAILS_OpenCV:INTERNAL=[/usr][cfound components: opencv_calib3d opencv_core opencv_dnn opencv_features2d opencv_flann opencv_gapi opencv_highgui opencv_imgcodecs opencv_imgproc opencv_ml opencv_objdetect opencv_photo opencv_stitching opencv_video opencv_videoio opencv_alphamat opencv_freetype opencv_hdf opencv_mcc opencv_optflow opencv_rapid opencv_sfm opencv_signal opencv_superres opencv_text opencv_videostab opencv_wechat_qrcode opencv_xfeatures2d opencv_ximgproc ][v4.10.0()]
+FIND_PACKAGE_MESSAGE_DETAILS_OpenCV:INTERNAL=[/usr/local][cfound components: opencv_calib3d opencv_core opencv_dnn opencv_features2d opencv_flann opencv_gapi opencv_highgui opencv_imgcodecs opencv_imgproc opencv_ml opencv_objdetect opencv_photo opencv_stitching opencv_video opencv_videoio ][v4.10.0()]
 //Details about finding OpenGL
 FIND_PACKAGE_MESSAGE_DETAILS_OpenGL:INTERNAL=[/usr/lib/x86_64-linux-gnu/libOpenGL.so][/usr/lib/x86_64-linux-gnu/libGLESv2.so][/usr/include][cfound components: OpenGL GLES3 ][v()]
 //Details about finding OpenSSL
