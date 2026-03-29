@@ -129,6 +129,43 @@ hello_vitals/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/hello_vitals.dir/build.make CMakeFiles/hello_vitals.dir/build
 .PHONY : hello_vitals/fast
 
+#=============================================================================
+# Target rules for targets named attention_tracker
+
+# Build rule for target.
+attention_tracker: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 attention_tracker
+.PHONY : attention_tracker
+
+# fast build rule for target.
+attention_tracker/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/attention_tracker.dir/build.make CMakeFiles/attention_tracker.dir/build
+.PHONY : attention_tracker/fast
+
+attention_tracker.o: attention_tracker.cpp.o
+.PHONY : attention_tracker.o
+
+# target to build an object file
+attention_tracker.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/attention_tracker.dir/build.make CMakeFiles/attention_tracker.dir/attention_tracker.cpp.o
+.PHONY : attention_tracker.cpp.o
+
+attention_tracker.i: attention_tracker.cpp.i
+.PHONY : attention_tracker.i
+
+# target to preprocess a source file
+attention_tracker.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/attention_tracker.dir/build.make CMakeFiles/attention_tracker.dir/attention_tracker.cpp.i
+.PHONY : attention_tracker.cpp.i
+
+attention_tracker.s: attention_tracker.cpp.s
+.PHONY : attention_tracker.s
+
+# target to generate assembly for a file
+attention_tracker.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/attention_tracker.dir/build.make CMakeFiles/attention_tracker.dir/attention_tracker.cpp.s
+.PHONY : attention_tracker.cpp.s
+
 hello_vitals.o: hello_vitals.cpp.o
 .PHONY : hello_vitals.o
 
@@ -161,7 +198,11 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
+	@echo "... attention_tracker"
 	@echo "... hello_vitals"
+	@echo "... attention_tracker.o"
+	@echo "... attention_tracker.i"
+	@echo "... attention_tracker.s"
 	@echo "... hello_vitals.o"
 	@echo "... hello_vitals.i"
 	@echo "... hello_vitals.s"

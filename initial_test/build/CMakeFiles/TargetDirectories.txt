@@ -1,3 +1,4 @@
 /home/neilc/SocialLens/initial_test/build/CMakeFiles/hello_vitals.dir
+/home/neilc/SocialLens/initial_test/build/CMakeFiles/attention_tracker.dir
 /home/neilc/SocialLens/initial_test/build/CMakeFiles/edit_cache.dir
 /home/neilc/SocialLens/initial_test/build/CMakeFiles/rebuild_cache.dir

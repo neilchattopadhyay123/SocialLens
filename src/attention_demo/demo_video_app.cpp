@@ -1,0 +1,160 @@
+#include "attention_demo/demo_video_app.hpp"
+
+#include "attention_demo/attention_estimator.hpp"
+#include "attention_demo/overlay_renderer.hpp"
+#include "attention_demo/status_flags.hpp"
+
+#include <smartspectra/container/foreground_container.hpp>
+#include <smartspectra/container/settings.hpp>
+#include <physiology/modules/messages/metrics.h>
+#include <physiology/modules/messages/status.h>
+#include <opencv2/opencv.hpp>
+
+#include <cmath>
+#include <iostream>
+#include <mutex>
+#include <string>
+
+namespace attention_demo {
+
+using namespace presage::smartspectra;
+
+int DemoVideoApp::Run(const std::string& api_key,
+                     const std::string& input_video_path,
+                     const std::string& output_video_path) {
+    try {
+        // Probe input FPS so output timing matches source video.
+        double output_fps = 30.0;
+        {
+            cv::VideoCapture probe(input_video_path);
+            if (probe.isOpened()) {
+                const double probed_fps = probe.get(cv::CAP_PROP_FPS);
+                if (probed_fps >= 1.0 && probed_fps <= 240.0) {
+                    output_fps = probed_fps;
+                }
+            }
+        }
+
+        container::settings::Settings<
+            container::settings::OperationMode::Continuous,
+            container::settings::IntegrationMode::Rest
+        > settings;
+
+        settings.video_source.device_index = -1;
+        settings.video_source.input_video_path = input_video_path;
+        settings.video_source.input_video_time_path = "";
+        settings.video_source.capture_width_px = 1280;
+        settings.video_source.capture_height_px = 720;
+        settings.video_source.auto_lock = false;
+
+        settings.headless = false;
+        settings.enable_edge_metrics = true;
+        settings.verbosity_level = 1;
+        settings.interframe_delay_ms = static_cast<int>(std::round(1000.0 / output_fps));
+        settings.continuous.preprocessed_data_buffer_duration_s = 0.5;
+        settings.integration.api_key = api_key;
+
+        auto container = std::make_unique<container::CpuContinuousRestForegroundContainer>(settings);
+
+        const int output_width = 1280;
+        const int output_height = 720;
+        const cv::Size output_size(output_width, output_height);
+
+        cv::VideoWriter writer;
+        bool opened = false;
+        int selected_fourcc = 0;
+        for (const int candidate_fourcc : {
+                 cv::VideoWriter::fourcc('a', 'v', 'c', '1'),
+                 cv::VideoWriter::fourcc('m', 'p', '4', 'v')
+             }) {
+            if (writer.open(output_video_path, candidate_fourcc, output_fps, output_size, true)) {
+                selected_fourcc = candidate_fourcc;
+                opened = true;
+                break;
+            }
+        }
+
+        if (!opened) {
+            std::cerr << "Failed to open output video for writing: " << output_video_path << "\n";
+            return 1;
+        }
+        std::cout << "Video writer configured at " << output_fps << " FPS (codec fourcc=" << selected_fourcc << ")\n";
+
+        std::mutex state_mutex;
+        StatusFlags status_flags;
+        AttentionEstimator estimator;
+
+        auto status = container->SetOnCoreMetricsOutput(
+            [&state_mutex, &status_flags, &estimator](const presage::physiology::MetricsBuffer& metrics, int64_t) {
+                {
+                    std::lock_guard<std::mutex> lock(state_mutex);
+                    estimator.Update(metrics, status_flags);
+                }
+                return absl::OkStatus();
+            }
+        );
+        if (!status.ok()) {
+            std::cerr << "Failed to set metrics callback: " << status.message() << "\n";
+            return 1;
+        }
+
+        status = container->SetOnStatusChange(
+            [&state_mutex, &status_flags](presage::physiology::StatusValue imaging_status) {
+                const auto code = imaging_status.value();
+                const std::string description = presage::physiology::GetStatusDescription(code);
+                {
+                    std::lock_guard<std::mutex> lock(state_mutex);
+                    status_flags = ParseStatusFlagsFromDescription(description);
+                }
+                return absl::OkStatus();
+            }
+        );
+        if (!status.ok()) {
+            std::cerr << "Failed to set status callback: " << status.message() << "\n";
+            return 1;
+        }
+
+        status = container->SetOnVideoOutput(
+            [&writer, &state_mutex, &estimator, output_width, output_height](cv::Mat& frame, int64_t) {
+                if (frame.cols != output_width || frame.rows != output_height) {
+                    cv::resize(frame, frame, cv::Size(output_width, output_height));
+                }
+
+                double score = 0.0;
+                {
+                    std::lock_guard<std::mutex> lock(state_mutex);
+                    score = estimator.attention_score();
+                }
+
+                DrawAttentionOverlay(frame, score, output_height);
+                writer.write(frame);
+                return absl::OkStatus();
+            }
+        );
+        if (!status.ok()) {
+            std::cerr << "Failed to set video callback: " << status.message() << "\n";
+            return 1;
+        }
+
+        std::cout << "Initializing demo video generator...\n";
+        if (auto init_status = container->Initialize(); !init_status.ok()) {
+            std::cerr << "Failed to initialize: " << init_status.message() << "\n";
+            return 1;
+        }
+
+        std::cout << "Generating demo video from: " << input_video_path << "\n";
+        if (auto run_status = container->Run(); !run_status.ok()) {
+            std::cerr << "Processing failed: " << run_status.message() << "\n";
+            return 1;
+        }
+
+        writer.release();
+        std::cout << "Demo video created: " << output_video_path << "\n";
+        return 0;
+    } catch (const std::exception& e) {
+        std::cerr << "Error: " << e.what() << "\n";
+        return 1;
+    }
+}
+
+}  // namespace attention_demo

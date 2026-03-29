@@ -62,4 +62,5 @@ set(CMAKE_MAKEFILE_PRODUCTS
 # Dependency information for all targets:
 set(CMAKE_DEPEND_INFO_FILES
   "CMakeFiles/hello_vitals.dir/DependInfo.cmake"
+  "CMakeFiles/attention_tracker.dir/DependInfo.cmake"
   )
