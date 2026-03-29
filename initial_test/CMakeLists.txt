@@ -1,5 +1,8 @@
 cmake_minimum_required(VERSION 3.27.0)
 project(SmartSpectraHelloVitals CXX)
+
+# Prefer relative paths in generated make rules when supported by the generator.
+set(CMAKE_USE_RELATIVE_PATHS ON)
  
 # Set C++ standard
 set(CMAKE_CXX_STANDARD 17)

@@ -43,7 +43,7 @@ void AttentionEstimator::Update(const presage::physiology::MetricsBuffer& metric
     status_score = std::clamp(status_score, 0.0, 1.0);
 
     const double talking_penalty = talking_now ? 0.35 : 0.0;
-    raw_attention_score_ = std::clamp((0.70 * status_score) + (0.30 * blink_score) - talking_penalty, 0.0, 1.0);
+    raw_attention_score_ = std::clamp((status_score) - talking_penalty, 0.0, 1.0);
 
     if (!initialized_) {
         attention_score_ = raw_attention_score_;
