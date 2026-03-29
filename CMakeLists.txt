@@ -12,7 +12,12 @@ option(SOCIALLENS_ENABLE_RPATH "Embed runtime library search paths into binaries
 find_package(SmartSpectra REQUIRED)
 find_package(OpenCV REQUIRED)
 
-set(ONNXRUNTIME_ROOT "${CMAKE_SOURCE_DIR}/third_party/onnxruntime" CACHE PATH "Path to ONNX Runtime installation root")
+set(_ONNXRUNTIME_DEFAULT_ROOT "${CMAKE_SOURCE_DIR}/third_party/onnxruntime")
+if(EXISTS "/usr/local/onnxruntime/include/onnxruntime_cxx_api.h")
+    set(_ONNXRUNTIME_DEFAULT_ROOT "/usr/local/onnxruntime")
+endif()
+
+set(ONNXRUNTIME_ROOT "${_ONNXRUNTIME_DEFAULT_ROOT}" CACHE PATH "Path to ONNX Runtime installation root")
 
 find_path(ONNXRUNTIME_INCLUDE_DIR
     NAMES
@@ -20,6 +25,7 @@ find_path(ONNXRUNTIME_INCLUDE_DIR
         onnxruntime/core/session/onnxruntime_cxx_api.h
     PATHS
         ${ONNXRUNTIME_ROOT}/include
+        /usr/local/onnxruntime/include
         /usr/local/include
         /usr/include
 )
@@ -28,6 +34,7 @@ find_library(ONNXRUNTIME_LIBRARY
     NAMES onnxruntime
     PATHS
         ${ONNXRUNTIME_ROOT}/lib
+        /usr/local/onnxruntime/lib
         /usr/local/lib
         /usr/lib
         /usr/lib/x86_64-linux-gnu
@@ -41,6 +48,7 @@ if(NOT ONNXRUNTIME_LIBRARY)
             libonnxruntime.so.1.18.1
         PATHS
             ${ONNXRUNTIME_ROOT}/lib
+            /usr/local/onnxruntime/lib
             /usr/local/lib
             /usr/lib
             /usr/lib/x86_64-linux-gnu
@@ -48,7 +56,7 @@ if(NOT ONNXRUNTIME_LIBRARY)
 endif()
 
 if(NOT ONNXRUNTIME_INCLUDE_DIR OR NOT ONNXRUNTIME_LIBRARY)
-    message(FATAL_ERROR "ONNX Runtime not found. Set ONNXRUNTIME_ROOT or install ONNX Runtime headers/libs.")
+    message(FATAL_ERROR "ONNX Runtime not found. Set ONNXRUNTIME_ROOT to your install root (e.g., /usr/local/onnxruntime).")
 endif()
 
 add_library(ONNXRuntime::onnxruntime SHARED IMPORTED GLOBAL)
