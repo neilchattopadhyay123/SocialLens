@@ -1,8 +1,7 @@
 #include "attention_demo/demo_video_app.hpp"
 
-#include "attention_demo/attention_estimator.hpp"
+#include "attention_demo/attentiveness_scorer.hpp"
 #include "attention_demo/overlay_renderer.hpp"
-#include "attention_demo/status_flags.hpp"
 #include "EmotionDetector.hpp"
 
 #include <smartspectra/container/foreground_container.hpp>
@@ -16,8 +15,9 @@
 #include <iostream>
 #include <limits>
 #include <memory>
-#include <mutex>
+#include <deque>
 #include <string>
+#include <unordered_map>
 #include <vector>
 
 namespace attention_demo {
@@ -128,16 +128,13 @@ int DemoVideoApp::Run(const std::string& api_key,
             std::cout << "Warning: Haar cascade not found; emotion classification will use full frame.\n";
         }
 
-        std::mutex state_mutex;
-        StatusFlags status_flags;
-        AttentionEstimator estimator;
+        AttentivenessScorer scorer;
+        std::deque<std::string> emotion_history;
+        const size_t emotion_history_size = 60;
 
         auto status = container->SetOnCoreMetricsOutput(
-            [&state_mutex, &status_flags, &estimator](const presage::physiology::MetricsBuffer& metrics, int64_t) {
-                {
-                    std::lock_guard<std::mutex> lock(state_mutex);
-                    estimator.Update(metrics, status_flags);
-                }
+            [&scorer](const presage::physiology::MetricsBuffer& metrics, int64_t) {
+                scorer.OnCoreMetrics(metrics);
                 return absl::OkStatus();
             }
         );
@@ -146,14 +143,20 @@ int DemoVideoApp::Run(const std::string& api_key,
             return 1;
         }
 
+        status = container->SetOnEdgeMetricsOutput(
+            [&scorer](const presage::physiology::Metrics& metrics, int64_t) {
+                scorer.OnEdgeMetrics(metrics);
+                return absl::OkStatus();
+            }
+        );
+        if (!status.ok()) {
+            std::cerr << "Failed to set edge metrics callback: " << status.message() << "\n";
+            return 1;
+        }
+
         status = container->SetOnStatusChange(
-            [&state_mutex, &status_flags](presage::physiology::StatusValue imaging_status) {
-                const auto code = imaging_status.value();
-                const std::string description = presage::physiology::GetStatusDescription(code);
-                {
-                    std::lock_guard<std::mutex> lock(state_mutex);
-                    status_flags = ParseStatusFlagsFromDescription(description);
-                }
+            [&scorer](presage::physiology::StatusValue imaging_status) {
+                scorer.OnStatusChange(imaging_status);
                 return absl::OkStatus();
             }
         );
@@ -164,10 +167,11 @@ int DemoVideoApp::Run(const std::string& api_key,
 
         status = container->SetOnVideoOutput(
             [&writer,
-             &state_mutex,
-             &estimator,
+             &scorer,
+             &emotion_history,
              &emotion_detector,
              emotion_enabled,
+             emotion_history_size,
              &face_cascade,
              face_cascade_loaded,
              output_width,
@@ -176,11 +180,8 @@ int DemoVideoApp::Run(const std::string& api_key,
                     cv::resize(frame, frame, cv::Size(output_width, output_height));
                 }
 
-                double score = 0.0;
-                {
-                    std::lock_guard<std::mutex> lock(state_mutex);
-                    score = estimator.attention_score();
-                }
+                const auto attentiveness = scorer.Compute();
+                const double score = static_cast<double>(attentiveness.score / 100.f);
 
                 std::string emotion = emotion_enabled ? "Unknown" : "Unavailable";
                 if (emotion_enabled && emotion_detector && !frame.empty()) {
@@ -213,8 +214,30 @@ int DemoVideoApp::Run(const std::string& api_key,
                     }
                 }
 
+                // Smooth label jitter by displaying the most frequent emotion over
+                // the last N frames instead of the instantaneous prediction.
+                emotion_history.push_back(emotion);
+                if (emotion_history.size() > emotion_history_size) {
+                    emotion_history.pop_front();
+                }
+
+                std::unordered_map<std::string, int> counts;
+                for (const auto& e : emotion_history) {
+                    counts[e]++;
+                }
+
+                std::string smoothed_emotion = emotion;
+                int best_count = -1;
+                for (auto it = emotion_history.rbegin(); it != emotion_history.rend(); ++it) {
+                    const int c = counts[*it];
+                    if (c > best_count) {
+                        best_count = c;
+                        smoothed_emotion = *it;
+                    }
+                }
+
                 cv::putText(frame,
-                            "Emotion: " + emotion,
+                            "Emotion: " + smoothed_emotion,
                             cv::Point(30, 40),
                             cv::FONT_HERSHEY_SIMPLEX,
                             0.9,
