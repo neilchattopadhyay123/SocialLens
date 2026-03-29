@@ -1,5 +1,12 @@
 #include <opencv2/opencv.hpp>
+
+#if __has_include(<onnxruntime/core/session/onnxruntime_cxx_api.h>)
+#include <onnxruntime/core/session/onnxruntime_cxx_api.h>
+#elif __has_include(<onnxruntime_cxx_api.h>)
 #include <onnxruntime_cxx_api.h>
+#else
+#error "ONNX Runtime C++ header not found. Check ONNXRUNTIME_ROOT and include paths."
+#endif
 
 #include <algorithm>
 #include <array>

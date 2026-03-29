@@ -19,25 +19,24 @@ endif()
 
 set(ONNXRUNTIME_ROOT "${_ONNXRUNTIME_DEFAULT_ROOT}" CACHE PATH "Path to ONNX Runtime installation root")
 
+# Prevent stale cache values from mixing headers/libs across different ONNXRUNTIME_ROOT values.
+unset(ONNXRUNTIME_INCLUDE_DIR CACHE)
+unset(ONNXRUNTIME_LIBRARY CACHE)
+
 find_path(ONNXRUNTIME_INCLUDE_DIR
     NAMES
         onnxruntime_cxx_api.h
         onnxruntime/core/session/onnxruntime_cxx_api.h
     PATHS
         ${ONNXRUNTIME_ROOT}/include
-        /usr/local/onnxruntime/include
-        /usr/local/include
-        /usr/include
+    NO_DEFAULT_PATH
 )
 
 find_library(ONNXRUNTIME_LIBRARY
     NAMES onnxruntime
     PATHS
         ${ONNXRUNTIME_ROOT}/lib
-        /usr/local/onnxruntime/lib
-        /usr/local/lib
-        /usr/lib
-        /usr/lib/x86_64-linux-gnu
+    NO_DEFAULT_PATH
 )
 
 if(NOT ONNXRUNTIME_LIBRARY)
@@ -48,16 +47,16 @@ if(NOT ONNXRUNTIME_LIBRARY)
             libonnxruntime.so.1.18.1
         PATHS
             ${ONNXRUNTIME_ROOT}/lib
-            /usr/local/onnxruntime/lib
-            /usr/local/lib
-            /usr/lib
-            /usr/lib/x86_64-linux-gnu
+        NO_DEFAULT_PATH
     )
 endif()
 
 if(NOT ONNXRUNTIME_INCLUDE_DIR OR NOT ONNXRUNTIME_LIBRARY)
-    message(FATAL_ERROR "ONNX Runtime not found. Set ONNXRUNTIME_ROOT to your install root (e.g., /usr/local/onnxruntime).")
+    message(FATAL_ERROR "ONNX Runtime not found under ONNXRUNTIME_ROOT=${ONNXRUNTIME_ROOT}. Expected include/ and lib/ there.")
 endif()
+
+message(STATUS "Using ONNX Runtime include: ${ONNXRUNTIME_INCLUDE_DIR}")
+message(STATUS "Using ONNX Runtime library: ${ONNXRUNTIME_LIBRARY}")
 
 add_library(ONNXRuntime::onnxruntime SHARED IMPORTED GLOBAL)
 set_target_properties(ONNXRuntime::onnxruntime PROPERTIES
